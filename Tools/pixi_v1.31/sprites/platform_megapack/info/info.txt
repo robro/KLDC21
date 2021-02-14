@@ -1,0 +1,59 @@
+Mandew's Platform Megapack,
+ by Mandew.
+ 
+INTRODUCITION:
+	This Megapack is actually just one sprite that uses the Sprite Extension feature in Lunar Magic to behave in many different ways.
+	Those different behaviors, I call "Subsprites". I figured that these platforms shared enough similarities to be easily grouped as such.
+	The result should be something compact, including all the options without using much ROM space, and using only 1 sprite slot.
+ 
+VERSION HISTORY:
+	v1.0
+		First version of the sprite. Includes 16 sprites - 2 Boost Platforms, 
+		8 Grey Falling Platforms, 2 drifting platforms, and 4 vertically-wrapping platforms.
+ 
+ 
+USAGE INSTRUCTIONS:
+	1. Make sure that all the files are unzipped into PIXI's sprite folder - preferably within their own subfolder called "platform_megapack"
+
+	2. With PIXI, insert platform_megapack/platform_megapack.cfg as any standard sprite slot.
+	This will insert all the subsprites of the pack in that singular sprite slot.
+	
+	3. When adding this sprite to your level, use the "Extension" field in Lunar Magic's Add Sprite Manual window to determine which subsprite will be used.
+		Note that none of these sprites uses 3 as the Extra Bit.
+	
+LIST OF SUBSPRITES (What you put under "Extension 00-FFx"):
+	0 -- Brown Boost Platform
+	1 -- Gold Boost Platform, can jump infinitely.
+	
+	2 -- Grey Falling Platform, 2 tiles wide.
+	3 -- Grey Falling Platform, 4 tiles wide.
+	4 -- Grey, upwards Falling Platform, 2 tiles wide.
+	5 -- Grey, upwards Falling Platform, 4 tiles wide.
+	6 -- Grey, rightwards Falling Platform, 2 tiles wide.
+	7 -- Grey, rightwards Falling Platform, 4 tiles wide.
+	8 -- Grey, leftwards Falling Platform, 2 tiles wide.
+	9 -- Grey, leftwards Falling Platform, 4 tiles wide.
+	
+	A -- Grey Falling Platform, drifts to the left. 3 tiles wide.
+	B -- Grey Falling Platform, drifts to the right. 3 tiles wide.
+	
+	C -- Vertically-wrapping Brown platform, going down. 2 tiles wide.
+	D -- Vertically-wrapping Brown platform, going down. 4 tiles wide.
+	E -- Vertically-wrapping Brown platform, going up. 2 tiles wide.
+	F -- Vertically-wrapping Brown platform, going up. 4 tiles wide.
+	
+Note: Any invalid value will crash your game. In this case, there are 16 subsprites, so going beyond F will crash it.
+
+ADVANCED USE:
+	"platform_megapack.asm" includes defines that lets you control which subsprites are inserted, near the top of the file.
+	If you're afraid of wasting ROM space, you can disable the subsprites you don't need, and their programming will not be inserted.
+	If you try to use a sprite that has been removed, it will be replaced by a 1-tile wide fake grey platform that does nothing... So if you see that, you should probably review these settings.
+
+	Btw, 0 = disable, 1 = enable.
+	
+FOR PROGRAMMERS:
+	Please don't change the amount of Extra Bytes used by the sprite. I put this out there with the intents of updating it with new ideas later down the line, and changing the amount of Extra Bytes a custom sprite uses can corrupt level data for Lunar Magic.
+	
+CREDITS:
+	Megapack structure, subsprites 0-F
+		Mandew

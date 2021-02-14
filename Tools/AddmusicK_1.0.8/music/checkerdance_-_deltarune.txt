@@ -1,0 +1,83 @@
+#amk 2
+
+#spc
+{
+	#title "Checker Dance"
+	#game "Deltarune"
+	#author "Toby Fox"
+	#comment "MIDI by ShinkoNet, Port by Dippy"
+}
+
+#path "Deltarune"
+
+#samples
+{
+	#optimized
+	"909Kick.brr"
+	"Strings.brr"
+	"Synth Bass.brr"
+	"Cuica.brr"
+	"Flute.brr"
+	"Tom.brr"
+	"Piano.brr"
+}
+
+#instruments
+{
+	"909Kick.brr" $FF$E0$00$06$00							;@30	
+	"Strings.brr" $8A$E0$B8$03$C0 							;@31	
+	"Synth Bass.brr" $FF$E0$00$06$4A						;@32
+	"Cuica.brr" $FF$E0$00$01$7F								;@33
+	"Flute.brr" $FF$E0$00$04$00								;@34
+	"Tom.brr" $FF$E0$00$04$00								;@35
+	"Piano.brr" $FF$60$00$03$00								;@36
+}
+
+w255 t33
+
+$EF$FF$20$20
+$f1$05$37$01
+
+#0 @32 v190 o3 l16 ;Bass 
+/(2)[fr32f32r2^4 d+efr32f32r4^8g+4a+4] (2) (2)2
+(2)4
+(7)[f+r32f+32r2^4 eff+r32f+32r4^8a4b4] (7)3
+(2)
+
+
+
+#1 v210 l16 o4 ;Hi-Hats
+/y17(1)[@23v210c32v180c32v160c32v140c32] (1)7 (1)8 (1)12 r2
+(11)[@22v220c32v190c32v177c32v160c32](11)31 (11)32 (11)32 (11)32 (11)32 [r1]2 
+
+
+
+#2 v190 l16 o4 ;Perc
+/[r1]4(3)[@30c32rc32@29c^32@30c32rc@29c8] (3)3 (3)12 (3)8 (3)8 (3)8 [r1]2
+
+
+#3 v117 @34 l16 o4 ;Flute
+/y7[r1]8@34 (5)[v100r32f32g+32>c32<a+32r32f32g+32r32g+32>c32r32<a+f32r32 r32f32g+32>c32<a+32r32f32>d+32r32d32<a+32r32g+a+32r32 r32f32g+32>c32<a+32r32f32g+32r32g+32>c32r32<a+>c32r32 d+32r32d32<a+32>c32r32d+32f32d+32r32d32r32c32r32<f32r32] 
+(6)[r32f32g+32>c32<a+32r32f32g+32r32g+32>c32r32<a+f32r32 r32f32g+32>c32<a+32r32f32>d+32r32d32<a+32r32g+a+32r32 r32f32g+32>c32<a+32r32f32g+32r32g+32>c32r32<a+>c32r32 d+32r32d32<a+32>c32r32d+32f32a+32r32g+32r32g32r32d+32r32<] 
+(5) (6) 
+(10)[y10r1r2r8.@35v140c32v165c32v180c32r32<v140a32v165a32v180a32r32v140f32v165f32o4](10)3 [r1]2
+
+
+#4 v200 @15 l16 o4 ;Orch Hits & Tom
+/[r1]5r2r8. (9)[@35v150y17c32v165c32v180c32r32<v140y10a32v165a32v180a32r32v140y5f32v165f32o4]r1r2r8.(9) (4)[@15fr32f32r2^4 d+efr32f32r4^8g+4a+4] (4)3
+(8)[f+r32f+32r2^4 eff+r32f+32r4^8a4b4] (8)3 [r1]2
+
+
+#5 v100 @31 l16 o5 ;Strings & Piano 1
+/[r1]9y6r2c4d4r1r2c4d4[o5@36v110r[[cr32]]2[[dr32]]3r32[[d+r32]]2[[dr32]]3 r32[[cr32]]2[[dr32]]2d@31v100o5c4d4]2
+[@36v110o5r[[c+r32]]2[[d+r32]]3r32ar32f+r32[[d+r32]]3r32[[c+r32]]2[[d+r32]]2d+@31v100o5c+4d+4]4 [r1]2
+
+
+#6 v100 @31 l16 o4 ;Strings & Piano 2
+/[r1]9y16r2g+4a+4r1r2g+4a+4[o4@36v110r[[fr32]]2[[g+r32]]3r32[[g+r32]]2[[g+r32]]3 r32[[fr32]]2[[g+r32]]2g+@31v100o4g+4a+4]2
+[@36v110o4r[[f+r32]]2[[ar32]]3r32[[ar32]]5r32 [[f+r32]]2[[ar32]]2a@31v100o4a4b4]4 [r1]2
+
+
+#7 v120 l16 o4 @33 ;Cuica
+/[r1]4 r8 [ [[fr16r8]]6 frg+ra+rr8]5 [fr16r8]6 frg+ra+r
+[f+32ra32rf+c+32re32rf]16 [r1]2

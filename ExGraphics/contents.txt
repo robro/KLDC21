@@ -1,0 +1,5 @@
+ExGFX80.bin : Screen Scrolling Pipes
+ExGFX81.bin : Screen Scrolling Pipes extras
+ExGFX82.bin : Key lock blocks & misc blocks & switch palace tiles
+ExGFX83.bin : Animated blocks
+ExGFXFF.bin : Alphanumeric tiles

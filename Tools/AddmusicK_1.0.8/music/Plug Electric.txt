@@ -1,0 +1,118 @@
+#amk 2
+#instruments
+{
+n1E $FF $BA $7F $04 $00; @30 Open Hat
+n1F $BF $FB $7F $04 $00; @31 Closed Hat
+@21 $00 $00 $64 $03 $D4; @32 Kick
+@10 $FF $E0 $B8 $04 $A0; @33 Snare
+@29 $8F $79 $7F $02 $AC; @34 Tom
+@8 $9E $AE $B8 $0F $00; @35 Bass
+@1 $FF $C8 $B8 $03 $00; @36 Saw
+@0 $FF $C8 $B8 $03 $00; @37 Square
+@3 $FF $D0 $B8 $03 $00; @38 Celesta
+@4 $FF $C8 $B8 $06 $00; @39 Guitar
+@6 $FF $C8 $B8 $03 $00; @40 Brass
+}
+#spc
+{
+	#author	 "Capcom"
+	#game	 "Mega Man 9"
+	#title	 "Plug Electric"
+        #comment "Ported by Infinity"
+}
+
+"CH = y8 @30 v60"
+"OH = @31 y12 v70"
+"KICK= o4 v230 @32 $EC $00 $03 $00 $EF $0C $28 $28"
+"SNARE= o3 v200 @33 $EC $00 $03 $00 $EF $2C $28 $28"
+"TOM= o3 @34 v170 $EC $00 $04 $F5 $EF $2C $28 $28" 
+
+#0 w200 t60
+
+$EF $0C $28 $28
+$F1 $04 $28 $01
+
+r2
+/[ OH a+8 CH f+16f+16 ]170
+
+#1 r2/ @35 v200 y10
+
+o2 (10)[a8 g8 r8 a4^16 r16 > c16 < a8 a16 
+g8 f8 r8 g4^16 r16 b16 g8 g16 ]2
+(11)[f8 e8 r8 f4^16 r16 a16 f8 f16 
+g8 f8 r8 g4^16 r16 b16 g8] > c16 
+[d16 d16 c16 d16 r8 c16 r16 d16 r16] a16 r16 g16 c16 r8
+* d16 r16 f16 d16 r8 
+< (10)2
+(11) g16 
+[a16 a16 g16 a8 r16 g16 r16 a8] > c8 < b16 g8. 
+* a8 > c16 < a8. 
+(12)[a+8 a8 r8 a+4^16 r16 > d16 < a+8 a+16 
+> c8 < a+8 r8 > c4^16 r16 e16 c8 c16
+d8 d8 r8 d4 d16 r16 d16 d8 d16 
+d8 d8 r8 d4 d16 r16 d8] c8 
+(12) d16 d16 
+[d+4 r8 d+4^16 r16 g16 d+8 d+16 
+d4 r8 d4^16 r16 f16 d8 d16 ]2
+< a+4 r8 a+8. r16 a+8 > f16 < a+8. 
+> c4 r8 c8. r16 c8 g16 c8. 
+c+4 r8 c+8. r16 c+8 g+16 c+8. 
+d+4 r8 d+8. r16 d+8 a+16 d+8. 
+f4 r8 f8. r16 f8 > c16 < f8. 
+r8 f8 a8 > c8 f8 a8 > c8 f8 
+
+#2 r2/o4 q7f p20,16,32
+(20)[@36 v160 e8. e16 r8 a4 > c8 < b16 a8. g8. g16 r8 d4.. r8.
+e8. e16 r8 a8. r16 > c8 < b16 a8. g8. g16 r8 > d8. r16 c16 r16 < b16 a8. 
+f4 r8 f8. r16 f4 r8 g4. d8. r16 d8 e16 g8 r16] d2^4^16 r8. (21)[v140 @39 r8 o4 c16 r16 < b16 r16 > c16 r16 < b16 r16 g16 a16] r16 e16 g16 a16
+(20) > e2^4^16 r8. (21)
+(99)[r4]9 (22)[r8 c16 r16 d16 r8. c16 c16 r16 d16 r8 g8 
+r8 f16 r16 e16 r16 f16 r16 e16 r16 c16 d16]
+(99)9 (22) @40 v160
+o3 a16 > c16 d16 f16 
+a+2 a+8. a8. g8 
+a8. f8. d4^16 r16 < a16 > c16 d16 f16 
+a+2 a+8. > c8. < a+8 
+a8. f8. d4. d8. e16 
+f2 f8. e8 r16 f8 
+g2 g8. f8. g8 
+g+2 g+8. g8. g+8 
+a+2 a+8. g8. > d+8 
+f1
+^2^16 
+r4..  
+
+#3 r2/ @36 v180  p20,16,32
+o4 [a8. b16 r8 > c4 e8 d16 c8. 
+< b4 r8 g4.. r8. a8. b16 r8 > c8. r16 e8 d16 c8. 
+< b4 r8 > g8. r16 f16 r16 e16 d8. 
+c4 r8 < a8. r16 a8. > c8. 
+< b4. g8. r16 g8 a16 b8 r16 a2^4^16] r1^16 e16 g16
+* r2.^8. (30)[o3 v180 @37
+ a16 > c16 d16 f16 
+a2 a8. g8. f8]
+e2. c4 
+d2^8^16r16 r8 (31)[v140 @39 d8 r8 c16 r16 < b16 r16 > c16 r16 < b16 r16 g16 a16]
+(30)
+> e2 e8. c8. > c8 
+< a2^4^16r16 (31)
+(99)41
+
+#4 r2/ @38 o4 $FA $02 $00
+(99)26
+v200 $E8 $C0 $40 [ d16 <a16 f+16]5 d16
+(99)28
+v200 $E8 $C0 $40 [>c16 < a16 e16]5 c16
+(99)50
+[v200 $E8 $C0 $60 a16 f16 d16 a16 f16 d16 a16 f16]2
+(40)[v180 $E8 $C0 $60 > c16 < g16 e16 > c16 < g16 e16 > c16 < g16]2
+$FA $02 $01 (40)2
+$FA $02 $03(40)2
+$FA $02 $05 (40)2
+r1
+#5 l16
+
+TOM y2ay5ay8ay10ay12gy14gy16gy18g / y10
+(51)[KICK c8^16 c SNARE a8 KICK cc8c8c SNARE a8 KICK c8]15
+KICK c8^16 c SNARE a8 KICK c8 SNARE aa8^16 a KICK c SNARE aa
+(51)17 SNARE a4 a4 TOM y2ay5ay8ay10ay12gy14gy16gy18g

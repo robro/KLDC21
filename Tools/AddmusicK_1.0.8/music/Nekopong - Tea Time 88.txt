@@ -1,0 +1,359 @@
+; Nekopong - Tea Time 88
+; 0:39, 0x0854 bytes
+
+; Author: Nekopong ( http://web.archive.org/web/20050422090905/http://osaka.cool.ne.jp/nekopong/ )
+
+; Enable different version of this song (1 = Sine, 2 = Square, 3 = Flute)
+#define VERSION 3
+
+; Enable echo on this song (0 = off, 1 = on)
+#define ECHO 1
+
+#amk 2
+#path "mus031"
+#samples
+{
+	#if ECHO == 0
+	#optimized
+	#endif
+
+	#if ECHO == 1
+	"../optimized/00 SMW @0.brr"
+	"../optimized/01 SMW @1.brr"
+	"../optimized/02 SMW @2.brr"
+	"../optimized/03 SMW @3.brr"
+	"../optimized/04 SMW @4.brr"
+	"../optimized/05 SMW @8.brr"
+	"../optimized/06 SMW @22.brr"
+	"../optimized/07 SMW @5.brr"
+	"../optimized/08 SMW @6.brr"
+	"../optimized/09 SMW @7.brr"
+	"../optimized/0A SMW @9.brr"
+	"../optimized/0B SMW @10.brr"
+	"../optimized/0C SMW @13.brr"
+	"../EMPTY.brr"
+;	"../optimized/0E SMW @29.brr"
+	"../EMPTY.brr"
+;	"../optimized/10 SMW @12.brr"
+	"../EMPTY.brr"
+;	"../optimized/12 SMW @15.brr"
+;	"../optimized/13 SMW Thunder.brr"
+	#endif
+
+	; =============== Custom samples ($14+) begin ===============
+
+	"kick 3.brr"
+	"snare 4.brr"
+	"tom 3.brr"
+	"elec hat close 1.brr"
+	"acoustic hat open 3.brr"
+	"acoustic cymb 3.brr"
+	"hgb_piano_mid.brr"
+	"hgb_piano_low.brr"
+
+	#if VERSION == 1
+	"high sine.brr"
+	#endif
+
+	#if VERSION == 2
+	"square resonant.brr"
+	#endif
+
+	#if VERSION == 3
+	"blown bottle.brr"
+	#endif
+
+	"hgb_slapbass2.brr"
+}
+#instruments
+{
+	"kick 3.brr" $FF $F6 $B8 $04 $00
+	"snare 4.brr" $FF $F6 $B8 $06 $80
+	"tom 3.brr" $AF $74 $B8 $05 $00
+	"acoustic cymb 3.brr" $8F $F2 $B8 $06 $60
+	"elec hat close 1.brr" $FF $E0 $B8 $07 $A8
+	"acoustic hat open 3.brr" $FF $F8 $B8 $06 $80
+	"hgb_piano_mid.brr" $AF $CD $B8 $05 $10
+	"hgb_piano_low.brr" $AF $E8 $B8 $09 $C0
+
+	#if VERSION == 1
+	"high sine.brr" $FF $E0 $B8 $02 $00
+	#endif
+
+	#if VERSION == 2
+	"square resonant.brr" $9E $C0 $B8 $02 $FA
+	#endif
+
+	#if VERSION == 3
+	"blown bottle.brr" $FF $E0 $B8 $03 $00
+	#endif
+
+	"hgb_slapbass2.brr" $FF $E3 $B8 $0D $80
+}
+#spc
+{
+	#author    "Nekopong"
+	#game      "Custom"
+	#comment   "Ported by tcdw (20210109)"
+	#title     "Tea Time 88 (Arrangement)"
+}
+
+(!1)[$F4 $09]
+(!2)[$ED $80 $B0]
+(!9)[$ED $80 $BA]
+
+#0
+#if VERSION == 2	v240	#endif
+#ifndef VERSION == 2	v255	#endif
+
+w160 t49 $F4 $02
+#if ECHO == 1
+$EF $F9 $20 $E4
+$F1 $08 $40 $00
+$F5 $0C $21 $2B $2B $13 $FE $F3 $F9
+#endif
+@38 h0 $F4 $01
+q7B o4 g+64 a48
+$F4 $01
+^48 r192 b16 > c16
+/
+$F4 $01
+d32 d+32 e4
+$F4 $01
+^8. d8. c16 r8 < b16 r16 g2 a8. > c8.
+$F4 $01
+< a16 b48 > c48 d96
+$F4 $01
+^96 e2 g8. e16 r8 d8 d6... c16 r16
+$F4 $01
+d64 q7C d+16
+$F4 $01
+^32 r24... q7B d8 c8 < a16..
+$F4 $01
+> c64 d32 d+32 e4
+$F4 $01
+^8. d8. c16 r8 < b16 r16 g2
+$F4 $01
+a=23 b32 > c64
+$F4 $01
+^64
+$F4 $01
+< a8 b32 > c64
+$F4 $01
+^64
+$F4 $01
+< a=13 b48 > c48 d96
+$F4 $01
+^96 e2 g8. e16 r8 g16 r16
+$F4 $01
+g48 g+48 a4
+$F4 $01
+^48 g16 r16 a8 r16 g8 e8 d8 a8 g16 e16 r2 e16 r16 d3... g4 a4 e2 ^6 r12
+$F4 $01
+c96 d=10 c32
+$F4 $01
+^32 r16 e2 ^8. r8 g8 a8 e8 g16 a16 r2 e16 e24 r48 g16 e16
+$F4 $01
+a+64 b4
+$F4 $01
+^8.. r64 g4. r96 a24 r64 b24 r64 > c4. < b16 a16 b16 g16 r16 e16 r16 d16 r16
+$F4 $01
+c32 d64
+$F4 $01
+^64 e4. d16 c16 g16 e16 r16 d16 r16 c16 < b16 r16 a2 e8 d16 r16 c16 r16 g16 e2 ^2 ^16 r4
+$F4 $01
+f64 f+64 g8
+$F4 $01
+^16. d+8 d16 r16 c16 r16 f16 d2 ^4 r8
+$F4 $01
+g+64 a32
+$F4 $01
+^64 b16 > c16
+
+#1
+@39 h0 v180
+(!1, 255)
+(!2, 3)
+q7F r8.
+/
+(3)[
+q7E o2 f8 f8 > c16 < f8 f16 e8 e16 b8 e8 e16 d+8 d+8 a+16 d+8 d+16 d8 d16 a8 d8 e16 f8 f8 > c16 < f8 f16 e8 e16 b8 e8 e16
+]1
+q7E o2 d+8 a+8 > d+16 < d+8 d+16 d8 a16 > d8 < d8 e16
+(3)1
+q7E o2 d+8 a+8 > d+16 < d+8 d+16 r16 d16 d8 d8 d8
+(4)[
+q7E o2 f16 r8. f16 r8. f16 r8 f16 r8 e8 r16 e16 r8 e16 r8. e16 r8 e16 r8 e8
+]1
+q7E o2 d16 r8. d16 r8. d16 r8 d16 r8 c8 r16 c16 r8 c16 r8. c16 r8 c16 d8 e8
+(4)1
+q7E o1 a8. > a8. e8 < b8. > b8. g8 c8. > c8. < g8 d8. > d8. < a8
+[[
+q7E f16 f16 q7D > f16 f16
+]]4
+[[
+q7E < e16 e16 q7D > e16 e16
+]]4
+[[
+q7E < d+16 d+16 q7D > d+16 d+16
+]]4
+[[
+q7E < d16 d16 q7D > d16 d16
+]]4
+
+#2
+v250 q7F r8.
+/
+(5)[
+@30 h0 q7D o4 c4
+@31 h0 q7F c4
+@30 h0 q7D c16
+@31 h0 q7F c8. c8. c16
+@30 h0 q7D c4
+@31 h0 q7F c4
+@30 h0 q7D c16
+@31 h0 q7F c8. c8 c16 c16
+]3
+(6)[
+@30 h0 q7D o4 c4
+@31 h0 q7F c4
+@30 h0 q7D c16
+@31 h0 q7F c8. c8. c16
+@30 h0 q7D c4
+@31 h0 q7F c4
+@30 h0 q7D c16
+@31 h0 q7F c8. c16 c16 c8
+]1
+(5)1
+(6)1
+(5)1
+@30 h0 q7D o4 c4
+@31 h0 q7F c4
+@30 h0 q7D c16
+@31 h0 q7F c8. c16
+@32 h0 q7D f+16
+@32 h0 q7E d16
+@31 h0 q7F c16
+@30 h0 q7D c4
+@31 h0 q7F c4
+@30 h0 q7D c16
+@31 h0 q7F c8.
+@32 h0 q7C b16
+@32 h0 q7D f+16
+@31 h0 q7F c16
+@32 h0 q7E d16
+(5)2
+
+#3
+v230 q7F r8.
+/
+
+(7)[
+@33 h0 q7A o4 c6...
+@34 h0 q79 c16
+@35 h0 q78 c16
+@34 h0 q79 c16 c16 c16
+@35 h0 q78 c16
+[[
+@34 h0 q79 c8 c16
+@35 h0 q78 c8
+@34 h0 q79 c16 c16
+@35 h0 q78 c16
+@34 h0 q79 c8 c16
+@35 h0 q78 c16
+@34 h0 q79 c16 c16 c16
+@35 h0 q78 c16
+]]3
+]1
+(700)[@34 h0 q79 o4 c8 c16
+@35 h0 q78 c8]
+(7)
+(700)
+(7)1
+@34 h0 q79 o4 c16
+@33 h0 q7A c8
+@33 h0 q7A c4
+[
+@35 h0 q78 c16
+@34 h0 q79 c8 c16
+@35 h0 q78 c16
+@34 h0 q79 c16 c16 c16
+@35 h0 q78 c16
+@34 h0 q79 c8 c16
+@35 h0 q78 c8
+]
+@34 h0 q79 c16 c16
+*
+(80)[
+@33 h0 q7A o4 c6...
+@34 h0 q79 c16
+@35 h0 q78 c16
+@34 h0 q79 c16 c16 c16
+@35 h0 q78 c16
+@34 h0 q79 c8 c16
+]1
+@35 h0 q78 o4 c16
+@34 h0 q79 c16
+(80)1
+@35 h0 q78 o4 c16
+@34 h0 q79 c16
+[[
+(80)1
+@35 h0 q78 o4 c8
+@34 h0 q79 c16 c16
+@35 h0 q78 c16
+@34 h0 q79 c8 c16
+@35 h0 q78 c16
+@34 h0 q79 c16 c16 c16
+@35 h0 q78 c16
+@34 h0 q79 c8 c16
+@35 h0 q78 c8
+]]2
+
+#4
+@37 h0 v200 y10
+(!1, 255)
+(!9, 3)
+q7F r8.
+/
+[[
+q7D o2 f8 r8 f16 r8 f16 e16 r8 e16 r8 e8 d+8 r8 d+16 r8 d+16 d16 r8 d16 r8 d8
+]]4
+q7D f8 r8 f16 r8 f8 r8 f16 r8 e8 e8 r8 e16 r8 e8 r8 e16 r8 e8 d8 r8 d16 r8 d8 r8 d16 r8 c8 c8 r8 c16 r8 c8 r8 c16 q7D g8 a8 q7D f8 r8 f16 r8 f8 r8 f16 r8 e8 e8 r8 e16 r8 e8 r8 e16 r8 e8 < a2 b2 > c2 d2 f8 f2 ^4. e2 ^4. e16 e16 d+8 d+2 ^4. d2 ^2
+
+#5
+@36 h0 v190 y11
+(!1, 255)
+(!9, 3)
+q7F r8.
+/
+r8
+[[
+q7B o4 e8 r16 e8 r8 d8 r16 d8 r4 d8 r16 d8 r8 c8 r16 c8 r4
+]]4
+q7B e8 r16 e8 r8 e8 r16 e8 r4 d8 r16 d8 r8 d8 r16 d8 r4 c8 r16 c8 r8 c8 r16 c8 r4 < b8 r16 b8 r8 b8 r16 q7A > g8 a8 r8 q7B e8 r16 e8 r8 e8 r16 e8 r4 d8 r16 d8 r8 d8 r16 d8 r8 a2 g2 g2 f+2 q7C e16 q7B e16 q7C e16 e16 r16 e8 r16 q7B e8 r16 e8 r16 e16 e16 r8 e8 r16 e8 r16 e8 r16 e8 r16 q7C e16 e16 q7B d16 q7B d16 q7B d8 r16 d8 r16 d8 r16 d8 r16 d8 r8 c16 c16 r16 c8 r16 c8 r16 c8 r16 c8
+
+#6
+@36 h0 v190 y10
+(!1, 255)
+(!9, 3)
+q7F r8.
+/
+r8
+[[
+q7B o4 c8 r16 c8 r8 < b8 r16 b8 r4 a+8 r16 a+8 r8 a8 r16 a8 r4
+]]4
+q7B > c8 r16 c8 r8 c8 r16 c8 r4 < b8 r16 b8 r8 b8 r16 b8 r4 a8 r16 a8 r8 a8 r16 a8 r4 g8 r16 g8 r8 g8 r16 q7A > d8 e8 r8 q7B c8 r16 c8 r8 c8 r16 c8 r4 < b8 r16 b8 r8 b8 r16 b8 r8 q7C > e2 d2 e2 d2 c16 q7B c16 q7C c16 c16 r16 c8 r16 q7B c8 r16 c8 r16 c16 c16 r8 < b8 r16 b8 r16 b8 r16 b8 r16 q7C b16 b16 q7B a+16 q7B a+16 q7B a+8 r16 a+8 r16 a+8 r16 a+8 r16 a+8 r8 a16 a16 r16 a8 r16 a8 r16 a8 r16 a8
+
+#7
+@36 h0 v190 y9
+(!1, 255)
+(!9, 3)
+q7F r8.
+/
+r8
+[[
+q7B o3 a8 r16 a8 r8 g8 r16 g8 r4 g8 r16 g8 r8 f8 r16 f8 r4
+]]4
+q7B a8 r16 a8 r8 a8 r16 a8 r4 g8 r16 g8 r8 g8 r16 g8 r4 f8 r16 f8 r8 f8 r16 f8 r4 e8 r16 e8 r8 e8 r16 q7C g8 a8 r8 q7B a8 r16 a8 r8 a8 r16 a8 r4 g8 r16 g8 r8 g8 r16 g8 r8 q7C > c2 < b2 > c2 < a2 a16 q7B a16 q7C a16 a16 r16 a8 r16 q7B a8 r16 a8 r16 a16 a16 r8 g+8 r16 g+8 r16 g+8 r16 g+8 r16 q7C g+16 g+16 q7B g16 q7B g16 q7B g8 r16 g8 r16 g8 r16 g8 r16 g8 r8 f16 f16 r16 f8 r16 f8 r16 f8 r16 f8
+

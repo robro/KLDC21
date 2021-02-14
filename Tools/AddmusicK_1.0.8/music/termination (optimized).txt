@@ -1,0 +1,431 @@
+#amk 2
+
+#spc
+{
+	#title "Termination"
+	#author "Yuzo Koshiro"
+	#comment "Arranged by Ultima."
+	#game "Ys II"
+}
+
+#path "termination"
+
+#samples
+{
+    #optimized
+	"r8_kick_2.brr"
+	"yasui_snare.brr"
+	"r8_ride.brr"
+	"r8_ride_bell.brr"
+	"dexed_fat_bass.brr"
+	"r8_crash.brr"
+	"shreddage_rhythm_guitar_4th.brr"
+	"r8_china.brr"
+	"der_langrisser_tom.brr"
+	"d50_synth_lead_2.brr"
+	"d50_synth_lead_2_dwnsmp.brr"
+	"sd3_wind_sfx.brr"
+	"jv1080_creamy_guitar_lead.brr"
+    "shreddage_muted_guitar.brr"
+	"mmx_vibe.brr"
+	"jv1080_creamy_guitar_lead_4th.brr"
+	
+}
+
+#instruments
+{
+	"r8_kick_2.brr"                        $CF $20 $B8 $10 $00 ; @30
+	"yasui_snare.brr"                      $9F $00 $B8 $10 $00 ; @31
+	"r8_ride.brr"                          $FF $F4 $B8 $08 $00 ; @32
+	"r8_ride_bell.brr"                     $FF $F4 $B8 $08 $00 ; @33
+	"dexed_fat_bass.brr"                   $FF $E0 $B8 $17 $00 ; @34
+	"r8_crash.brr"                         $FF $F0 $B8 $08 $00 ; @35
+	"shreddage_rhythm_guitar_4th.brr"      $FF $EB $B8 $04 $D0 ; @36
+	"r8_china.brr"                         $FF $F0 $B8 $08 $00 ; @37
+	"der_langrisser_tom.brr"               $FF $F0 $B8 $08 $00 ; @38
+	"d50_synth_lead_2.brr"                 $FF $E0 $B8 $05 $C0 ; @39
+	"d50_synth_lead_2_dwnsmp.brr"          $FF $E0 $B8 $02 $E0 ; @40
+	"sd3_wind_sfx.brr"                     $F8 $E0 $00 $02 $00 ; @41
+	"jv1080_creamy_guitar_lead.brr"        $FF $E0 $B8 $06 $00 ; @42
+    "shreddage_muted_guitar.brr"           $FF $F4 $B8 $05 $40 ; @43
+	"mmx_vibe.brr"                         $FF $F4 $B8 $02 $00 ; @44
+	"yasui_snare.brr"                      $FF $E0 $B8 $10 $00 ; @45
+	"jv1080_creamy_guitar_lead_4th.brr"    $FF $E0 $B8 $05 $C0 ; @46
+}
+
+(!100)[$F4 $09]
+(!101)[$FA $01 $AE]
+(!102)[$FA $01 $BA]
+
+"GAIN INT = (!100, -1) (!101, 3)"
+"GAIN = (!100, -1) (!102, 3)"
+"GAIN OFF = (!100, 0)"
+
+"K = @30 q7C e" 
+"S = @31 q7A e" 
+"CHI = @37 y12 e"
+"CRHP = @35 y8 g"
+"RIDE = @32 y8 e"
+"RIDEB = @33 y8 e"
+
+$F4 $02
+
+#0 t67 @30 o3 q7E y10 
+v40 $E8 $FF $FF $DF [@30 e24e24e24e24e12]8
+q71 @31 e24 q71 e24 q71 e24 q72 e24 q72 e24 q72 e24 q72 e24 q73 e24 q73 e24 q73 e24 q74 e24 q74 e24 q74 e24 q75 e24 q75 e24 q75 e24 q75 e24 q76 e24 q76 e24 q76 e24 q77 e24 q77 e24 q77 e24 q77 e24
+q78 e24 q78 e24 q78 e24 q79 e24 q79 e24 q79 e24 q7A e24 q7A e24 q7A e24 q7A e24 q7B e24 q7B e24 q7B e24 q7C e24 q7C e24 q7C e24 q7C e24 q7D e24 q7D e24 q7D e24 q7E e24 q7E e24 q7E e24 q7E e24
+/(0)[r2]8
+$DE $40 $10 $40 (10)[@39 y10 >g+1
+c+12d+12e12f+12e12d+12e12d+12c+12d+12c+12<b12
+>c+2<f+2
+>c+2d+2
+g+1
+c+12d+12e12d+12e12f+12e12f+12g+12f+12g+12b12
+b2 $DD $00 $10 >c+^2
+c+12<b12g+12b12g+12f+12g+12f+12e12f+12e12<b12
+y12 g+1.
+a6>d6a6
+g+1.
+f+12e12d+12e12d+12<b12
+>c+1.
+<a6b6a6
+g+1.
+>c+12e12a12d+12f+12b12]1
+(0)8
+(10)
+(0)8
+ q7E <<c+2 $DD $00 $B0 >c+^2^1
+q7E d+4 y10 (11)[>c+1
+d+2f+2
+e12d+12e2^3
+d+1
+g+1
+f+2<b2
+>c+2c+6d+6
+e6d+2g+16 $DD $10 $04 f+^16 $DD $08 $04 e^8
+b16 $DD $10 $04 g+^16 $DD $08 $04 g^8 $EB $20 $40 $F4 g+4 q7A g+4 q7E $EB $00 $00 $00 >c+6d+6
+e6f+4e6d+4e3
+<g+12>c+12d+12e12d+12c+12g+12f+12e12
+a12g+12f+12b12a12g+12f+12e12d+12g+12f+12e12
+d+12g+12b12>c+4c+12<b12g+12>c+4
+c+12<b12g+12>c+4c+12<b12g+12>c+12<b12g+12
+f+12g+12b12>c+6d+6e6 @40 f+6 @39 e6
+@40 f+6 g+4 q7B g+4 q78 g+4]1
+q7E @42 $DF <<<b4r4g+4r4
+f+4r4g+4r4
+f+4a1.
+@39 d+12d+12d+12
+b12g+12f+12
+#1 o3 q7E y10 GAIN
+@41 $FA $03 $FF <<f+1^1^1^1
+/@34 $FA $03 $00 q7A [[
+(20)[>>c+16r48c+16r48c+16r48c+16r48c+16r48c+16r48c+16r48c+16r48c+16r48c+16r48c+16r48c+16r48]1
+d16r48d16r48d16r48d16r48d16r48d16r48d16r48d16r48d16r48d16r48d16r48d16r48
+]]2
+(20)2
+(23)[<b16r48b16r48b16r48b16r48b16r48b16r48b16r48b16r48b16r48b16r48b16r48b16r48
+a16r48a16r48a16r48a16r48a16r48a16r48b16r48b16r48b16r48b16r48b16r48b16r48]1
+(20)2
+b16r48b16r48b16r48b16r48b16r48b16r48b16r48b16r48b16r48b16r48b16r48b16r48
+a16r48a16r48a16r48a16r48>e16r48<a16r48b16r48b16r48b16r48b16r48>f+16r48<b16r48
+(20)
+(21)[>c+16r48c+16r48c+16r48c+16r48c+16r48c+16r48d16r48d16r48f+16r48f+16r48a16r48a16r48]1
+(20)
+(22)[c+16r48c+16r48c+16r48c+16r48c+16r48c+16r48<a16r48 q79 a16r48a16r48 q7A b16r48 q79 b16r48b16r48]1
+q7A (20)
+(21)
+(20)
+(22)
+q7A (20)
+>d16r48d16r48d16r48d16r48d16r48d16r48d16r48d16r48d16r48d16r48d16r48d16r48
+(20)
+d16r48d16r48d16r48d16r48d16r48d16r48d16r48d16r48d16r48d16r48d16r48d16r48
+(20)2
+(23)
+(20)2
+<b16r48b16r48b16r48b16r48b16r48b16r48b16r48b16r48b16r48b16r48b16r48b16r48
+a16r48a16r48a16r48a16r48>e16r48<a16r48b16r48b16r48b16r48b16r48>f+16r48<b16r48
+(20)
+(21)
+(20)
+(22)
+q7A (20)
+(21)
+(20)
+(22)
+[q7A >c+16r48c+16r48c+16r48c+16r48c+16r48c+16r48e16r48c+16r48c+16r48c+16r48c+16r48c+16r48
+f+16r48c+16r48c+16r48c+16r48c+16r48c+16r48 f16 $DD $08 $02 g r48f+16r48e16r48<g+16r48b16r48>e16r48]2
+<b4..... $DD $00 $20 >c+^4.....^2.....
+r32
+<g+8.. $DD $20 $10 <g+ r32
+(24)[>>c+16r48c+16r48c+16r48c+16r48c+16r48c+16r48c+16r48c+16r48c+16r48
+c+16r48c+16r48c+16r48<b16r48b16r48b16r48b16r48b16r48b16r48b16r48b16r48b16r48
+b16r48b16r48b16r48a16r48a16r48a16r48a16r48a16r48a16r48a16r48a16r48a16r48
+a16r48a16r48a16r48g+16r48g+16r48g+16r48g+16r48g+16r48g+16r48g+16r48g+16r48g+16r48
+a8.. $DD $00 $10 b r32>c+16r48c+16r48c+16r48c+16r48c+16r48c+16r48c+16r48c+16r48c+16r48
+c+16r48c+16r48c+16r48<b16r48b16r48b16r48b16r48b16r48b16r48b16r48b16r48b16r48
+>e16r48e16r48e16r48<a16r48a16r48a16r48a16r48a16r48a16r48a16r48a16r48a16r48
+a16r48a16r48a16r48g+16r48g+16r48g+16r48g+16r48g+16r48g+16r48g+16r48g+16r48g+16r48]1
+b8.. $DD $1B $10 >c+ r32
+(24)
+<b8.. $DD $1B $10 >c+ r32c+16r48c+16r48c+16r48 <b8.. $DD $00 $10 >c+ r32<b16r48b16r48b16r48
+a8.. $DD $00 $10 b r32 >c+16r48c+16r48c+16r48 <b32.. $DD $00 $10 >c+^32.. $DD $08 $20 <c+^16.. r32b16r48b16r48b16r48
+a32.. $DD $00 $10 b^32.. $DD $08 $20 <b^16..r32>a1^4...
+r32g+16r48g+16r48g+16r48
+>e16r48c+16r48<b16r1..
+r64
+r96
+#6 o4 q7E y10
+r6r24 $EB $08 $40 $E8
+v40 $E8 $FF $FF <@31 y5 e4 y15 e4 y5 e4 y15 e4
+y5 e4 y15 e4 y5 e4 $EB $00 $00 $00 @45 y10 GAIN INT e8r8^1 $FA $01 $E6 ^4^4^4
+r24
+/r4
+GAIN $DE $20 $10 $40 (30)[@46 >c+6c+12r2.
+d6d12r12e12r12d12r12e12]1
+r4
+(30)
+(0)16
+r2.
+(31)[q7D @42 <g+12>c+12e12
+g+12e12c+12f+12c+12<a+12>f+12d12<a12f+12a12>d12
+r2.<g+12>c+12e12
+g+12e12c+12f+12c+12<a+12]1 r1
+r4
+(31) q78 >>c+12e12a12d+12f+12b12
+r4 q7E <(30)
+r4 
+(30)
+(0)16
+r2.
+(31)
+r1
+r4
+(31) q78 >c+12e12a12d+12f+12b12
+r2 (32)[q78 @46 <<e12r4r6
+f+12r4r6f+24 $DD $00 $08 g+^24 $DD $00 $08 f+^12 e12r6e12]1
+r2
+(32)
+ q7E b2 $DD $00 $40 >c+^2 $DD $FF $40 <g^2^2
+ q7C g+4 $DD $18 $10 a+ b2 $DD $00 $40 >c+^4 $DD $40 $40 <c+^4
+b2 $DD $B0 $40 <b^2
+>g4. $DD $00 $20 a^4. $DD $60 $20 d+^4. $DD $00 $20 g+^4. 
+g+4
+b4 $DD $20 $10 >c <b2 $DD $00 $10 >c+^4 $DD $30 $40 <c+^4
+b2b4 $DD $20 $10 >e
+e4 $DD $20 $10 <a g4. $DD $00 $20 a^4. $DD $60 $20 d+^4. $DD $00 $20 g+^4. 
+r4
+$EB $20 $40 $F4 b4r4>c+4r4
+c+4r4<b4r4
+b4r4a4r4
+a4r2.
+$EB $00 $00 $00 b4>c+12 [q7E c+96r16r96]11 <b12 [b96r16r96]8
+>e12e96r16r96e96r16r96<a12 [a96r16r96]11 g+12 [g+96r16r96]8
+@42 q7A >f+4r4e4r4
+d+4r4e4r4
+d+4e1.
+<g+12 q7D g+12 q7D g+12
+ q7E >e12c+12<b12
+#3 o4 GAIN
+(0)8
+/$DE $20 $10 $40 (42)[@43 q7B $EE $00 y10 c+12c+12c+12 @46 q7E $EE $20 c+6c+12 @43 $EE $00 q7B c+12c+12c+12c+12c+12c+12
+d12d12d12 @46 $EE $20 q7E d6d12r12e12r12d12r12e12]2
+r4 (40)[@42 y10 $EE $00 e12r6d+12r6e12r6
+f+12r6e12r6d+12r6e12r4
+r6
+e12r6d+12r6e12r6
+f+12r6e12r6d+12r6<b12r6]1
+r4
+(40)
+ q7C (41)[c+12e12g+12b12g+12e12a+12f+12c+12r1
+r4
+c+12e12g+12b12g+12e12a+12f+12c+12]1 r2.
+<a12a12a12b12b12b12
+(41) r1
+r4
+ q79 (42)2
+r4 q7B (40)
+r4
+(40)
+ q7C (41) r2.
+a12a12a12b12b12b12
+(41) r1
+r4
+[q7E @43 >>c+12c+12c+12c+12c+12c+12 @36  e12 @43 c+12c+12c+12c+12c+12
+@36 f+12 @43 c+12c+12c+12c+12c+12 @36 g12f+12e12<g+12b12>e12]2
+ q7B c+1^1
+<g+4 [>c+12c+12c+12c+12c+12c+12c+12c+12c+12
+c+12c+12c+12<b12b12b12b12b12b12b12b12b12
+b12b12b12a12a12a12a12a12a12a12a12a12
+a12a12a12g+12g+12g+12g+12g+12g+12g+12g+12g+12
+b4]4 
+[@43 >c+12c+12c+12 @42 e4 @43 <b12b12b12 @42 >d+4]2
+<<a1.
+@42 g+12g+12g+12
+>e12c+12<b12
+#4 @32 o4 y10 GAIN
+(0)8
+/(0)8
+$DE $20 $10 $40 (50)[q7B @43 c+12c+12c+12 q7D @42 c+12 q7B @43 c+12c+12 q7D @42 <b12 q7B @43 >c+12c+12 q7D @42 c+12 q7B @43 c+12c+12
+q7D @42 d+12 q7B @43 c+12c+12 q7D @42 c+12 q7B @43 c+12c+12 q7D @42 <b12 q7B @43 >c+12c+12 q7D @42 c+12 q7B @43 c+12c+12
+c+12c+12c+12 q7D @42 c+12 q7B @43 c+12c+12 q7D @42 <b12 q7B @43 >c+12c+12 q7D @42 c+12 q7B @43 c+12c+12
+q7D @42 d+12 q7B @43 c+12c+12 q7D @42 c+12 q7B @43 c+12c+12 q7D @42 <b12 q7B @43 >c+12c+12 q7D]1 @42 <g+12 q7B @43 >c+12c+12
+(50)
+@42 <f+12 q7B @43 >c+12c+12
+r2.
+(52)[q7B @42 c+12e12g+12
+b12g+12e12a+12f+12c+12]1 a12f+12d12<a12>d12f+12
+r2. (52) r1
+r4
+(52) a12f+12d12<a12>d12f+12
+r2. (52) <a12>c+12e12<b12>d+12f+12
+(0)8
+ q7B (50) @42 <g+12 q7B @43 >c+12c+12
+(50) @42 <f+12 q7B @43 >c+12c+12
+r2. (52) a12f+12d12<a12>d12f+12
+r2. (52) r1
+r4
+(52) a12f+12d12<a12>d12f+12
+r2. (52) a12>c+12e12<b12>d+12f+12
+(0)8
+ @42 q76 <<g+16 $DD $10 $04 f+^16 $DD $08 $04 
+ g+^16 $DD $00 $04 f+^16 $DD $00 $04 
+ g+^16 $DD $00 $04 f+^16 $DD $00 $04 
+ g+^16 $DD $00 $04 f+^16 $DD $00 $04 
+ g+^16 $DD $00 $08 f+^16 $DD $00 $08 
+ g+^16 $DD $00 $08 f+^16 $DD $00 $08 
+ g+^16 $DD $00 $08 f+^16 $DD $00 $08 
+ g+^16 $DD $00 $08 f+^16 $DD $00 $08
+ g+^8 $DD $00 $10 f^8 $DD $00 $10 g+^2 $DD $40 $80 <g+^2
+(0)36
+ q7A b1..
+r1
+r1
+r192
+#5 o4 q7E y10 w140
+v40 $E8 $FF $FF @35 [y8 e2 y12 e2]2
+[y8 e4 y12 e4]4
+/$FA $03 $80 (60)[q7A RIDEB4e4e4e4
+e4e4e12 q7D CHI6]1 e4
+(60) e6 q79 e12
+ q7D CRHP4 q7A (61)[RIDE4]13 q7B CHI4e4
+ q7D CRHP4 q7A (61)10 e6 q77 e12
+ q7B CRHP2 q79 RIDEB4e4
+ (62)[q7A RIDE6 q77 e6 q79 e6 q7A e6 q78 e6 q79 e6
+ q7A e6 q78 e6 q79 e6 q7A e6 q76 e12 q7A e6 q76 e12
+ q7A e6 q77 e6 q79 e6 q7A e6 q78 e6 q79 e6
+ q7A e6 q78 e6]1 q78 e12 q78 RIDEB12 q7D CHI4e4
+(62) q7A e6 q7D CHI2
+(60) e4
+ q7A RIDEB4e4e4e4
+e4e4RIDE12 q7D CHI6e12e12 q79 e12
+ q7D CRHP4 q7A (61)13 q7B CHI4e4
+ q7D CRHP4 q7A (61)10 e6 q77 e3^4
+ q79 RIDEB4e4
+(62) q78 RIDE12 q78 RIDEB12 q7D CHI4e4
+(62) q7A RIDE6 q7D CHI2
+ q7A CRHP4 q7A RIDEB4 q79 e4 q7A e4
+ q7A e4 q7A e2.
+ q7A e4 q7A e4 q79 e4 q7A e4
+e1^1^4
+ q79 RIDE4 q78 e4 q79 e4
+ q7D CHI4 q7B CRHP4 q79 RIDEB4 q79 e4
+ (63)[q7A e4 q77 e4 q7A e4 q78 e4
+ q7A e4 q79 e4 q7A e4 q78 e4
+ q7A e4 q78 e4]1 q7A e4e2
+ q7D CRHP4 q79 RIDEB4 q79 e4
+ (63) q7A e6 q76 e12 q7A e6 q77 e3
+ q7E CRHP4 q79 RIDE6 q76 e12 q7A e4
+e6 q76 e12 q78 e4 q7A e6 q77 e12 q79 e4
+ q79 e6 q76 e12 q7A e4e6 q76 e12 q78 e4
+ q7A e4 q78 e4 q7A e6 q78 e12 q7A e2
+ q7D CRHP6  
+ [q77 RIDE6 q79 e6 q7A e6 q79 e6 q79 e6 q7A e6]3 
+ q79 e12 q7C CHI2.
+ [q7A RIDEB4 q79 CHI4 q7A RIDEB4 q77 CRHP4]2
+ q7E @44 y10 <a16 q7C a48 q7E >c+24 q7C <a48>c+48 q7E e24 q7C c+48e48 q7E a24 q7C e48a48 q7E e32r96 q7C a48e48 q7E c+24 q7C e48c+48 q7E >c+24 q7C <c+48 q7B >c+48 q7E <a24 q7B >c+48<a48 q7E e24 q7B a48e48
+ q7E >e24 q7B <e48>e48 q7E c+24 q7B e48c+48 q7E <a24 q7B >c+48<a48 q7D >a24 q7B <a48 q7A >a48 q7D e24 q7A a48e48 q7D c+24 q7A e48c+48 q7D >c+24 q7A <c+48>c+48 q7D <a24 q7A >c+48<a48 q7D e24 q7A a48e48 q7E <CRHP4
+ q7B e4
+#2 o4 q7E y10
+v40 $E8 $FF $FF [@38 y5 d24 y8 c24 y10 <b24 y12 a24 y15 g24f24]16
+/$FA $03 $FF y10 [[
+(70)[K6e12S6K12e6e12S6K12]1
+e6e12S6K12e12S12K12S12K12S12
+]]2
+(70)3
+e6e12S6K12S6K12S12K12e12
+(70)3
+S6K12S6K12S6K12S12e12e12
+(71)[K6e12S6K12e6e12S6K12
+e6e12S6K12e6e12S12e12e12
+K6e12S6K12e6e12S6K12
+e6e12S6K12]1 S12K12e12S12K12e12
+(71) e12S24e24e12e12e12e12
+[K6e12S6K12e6e12S6K12
+e6e12S6K12e12S12K12S12K12S12]2
+(70)3
+e6e12S6K12S6K12S12K12e12
+(70)3
+S6K12S6K12S6K12S12e12e12
+(71) S12K12e12S12K12e12
+(71) e12S24e24e12e12e12e12
+(72)[K12e12e12S6K12e12e12e12S6K12]1
+e12e12e12S6K12e6e12S12e12e12
+(72)
+e6e12S6K12S6K12S12e12e12
+K1^4
+S6K12S6K12S6K24e24
+[S4K6e12S6K12e6e12
+S6K12e6e12S6K12e6e12
+S6K12e6e12S6K12e6e12
+S6K12e6e12S6K12e12e12e12]2
+S4K12e12e12S6K12e12e12e12
+(73)[S6K12e12e12e12S6K12e12e12e12]1
+S12K12e12e12e12e12S6K12e12e12e12
+(73)
+S6 [S12K12S12K12S12K12S12K12S12K12S12K12]3
+S12K12S12K12S6K12S24e24e12e12
+e12e12e12K12e12e12S4K12e12e12
+S4K12e12e12S4K12e24e24e12
+S6^24K24S1.
+e6K12
+S6K12
+#7 o4 y10
+(0)8
+/(0)8
+r8
+$DE $40 $10 $40 (80)[@39 $EE $20 y8 q78 g+1
+c+12d+12e12f+12e12d+12e12d+12c+12d+12c+12
+<b12>c+2<f+2
+>c+2d+2
+g+1
+c+12d+12e12d+12e12f+12e12f+12g+12f+12g+12
+b12 b2 $DD $00 $10 >c+^2
+c+12<b12g+12b12g+12f+12g+12f+12e12f+12e24
+q7E $EE $00 <c+1.
+f+6a6>f+6
+e1.
+d+12c+12<b12>c+12<b12f+12
+g+1.
+f+6g+6f+6
+e1.
+f+12a12>c+12<g+12b12>d+12]1
+(0)8
+r8
+(80)
+(0)8
+q76 $DE $20 $10 $40 @42 $EE $00 
+c+16 $DD $10 $04 c^16 $DD $08 $04 
+c+^16 $DD $00 $04 c^16 $DD $00 $04 
+c+^16 $DD $00 $04 c^16 $DD $00 $04 
+c+^16 $DD $00 $04 c^16 $DD $00 $04 
+c+^16 $DD $00 $08 c^16 $DD $00 $08 
+c+^16 $DD $00 $08 c^16 $DD $00 $08 
+c+^16 $DD $00 $08 c^16 $DD $00 $08 
+c+^16 $DD $00 $08 c^16 $DD $00 $08
+c+^8 $DD $00 $10 <b^8 $DD $00 $10 >c+^2 $DD $40 $80 <c+^2
+r8 @39 $DE $40 $10 $40 v200 $EE $20 q7E (11)
+q75 g+4r1...
+q7E $DE $20 $10 $40 v250 @42 $EE $00 c+1.
+@39 <g+12g+12g+12
+>e12c+12<b12

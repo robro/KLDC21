@@ -1,0 +1,311 @@
+#amk 2
+
+#spc
+{
+	#author "Tatsuyuki Maeda"
+	#game	"Sonic 3D Blast"
+	#comment "Arranged by Ultima."
+	#title	"Rusty Ruin Zone (Act 1)"
+}
+
+#path "rusty"
+
+#samples
+{
+    #optimized
+    "yasui_snare.brr"
+	"r8_tom_7.brr"
+	"r8_hi-hat.brr"
+	"r8_crash.brr"
+	"r8_kick_2.brr"
+	"dexed_fat_bass.brr"
+	"jv1080_rugby_horn_short_loop.brr"
+	"korg_m1_oboe.brr"
+	"korg_m1_hard_flute.brr"
+	"soi_med_strings.brr"
+	"soi_piano_5.brr"
+	"square_wave.brr"
+}
+
+#instruments
+{
+    "soi_piano_5.brr"                            $FF $EE $B8 $02 $00 ; @30
+	"square_wave.brr"                            $FF $E0 $B8 $02 $00 ; @31
+    "korg_m1_hard_flute.brr"                     $FA $E4 $B8 $05 $C0 ; @32
+    "yasui_snare.brr"                            $9F $00 $00 $10 $00 ; @33
+	"r8_tom_7.brr"                               $FF $F0 $00 $08 $00 ; @34
+	"r8_hi-hat.brr"                              $FF $FB $00 $10 $00 ; @35
+	"r8_hi-hat.brr"                              $FF $F4 $00 $10 $00 ; @36
+	"r8_crash.brr"                               $FF $F0 $00 $08 $00 ; @37
+	"r8_kick_2.brr"                              $CF $20 $00 $10 $00 ; @38
+	"dexed_fat_bass.brr"                         $FF $E8 $B8 $0B $80 ; @39
+	"jv1080_rugby_horn_short_loop.brr"           $FF $E8 $B8 $05 $C0 ; @40
+	"korg_m1_oboe.brr"                           $F6 $E4 $B8 $0B $80 ; @41
+	"soi_med_strings.brr"                        $F4 $EB $B8 $04 $00 ; @42
+}
+
+"S = @33 q7C e"
+"K = @38 q7E e"
+"CR = @37 y15 e"
+"CH = @35 y8 e"
+"OH = @36 y12 e"
+
+$F4 $02
+
+(!100)[$F4 $09]
+(!101)[$FA $01 $B0]
+(!102)[$FA $01 $B8]
+
+"GAIN 1 = (!100, -1)(!101, 3)"
+"GAIN 2 = (!100, -1)(!102, 3)"
+
+$EF $FF $30 $D0
+$F1 $04 $60 $01
+$F5 $0D $22 $22 $24 $11 $F0 $03 $FF
+
+#0 t45 o4 q7C y8 w125
+(12)[GAIN 2 @30 >c12c24<a+12>c24r12c24<a+12>c24r12c24<g24a+24>c24d+12d+24d12<a+24
+>c12c24<a+12>c24r12c24<a+12>c24r12c24<g24a+24>c24g4]2
+/y8 $DF (12)
+c12c24<a+12>c24r12c24<a+12>c24r12c24<g24a+24>c24d+12d+24d12<a+24
+>c12c24<a+12>c24r12c24<a+12>c24g24f24g24f24d+24f24d+24d24d+24d24c24<a+24
+@32 $FA $03 $80 $DE $40 $10 $40 q7E GAIN 1 y10 g2.c4
+d+2d8.d+8.a+8
+a2g2.
+r2.
+g1
+c2c8.g8.d+8
+a+4.>c4<a1^4.
+@41 <g2c2
+d+8.d8.<a+4.a8a+8
+>c4.g1^8
+r2
+d+1
+r8d8d+8g8a+8.a8.f8
+g8.f2^16a+8.a1^16
+r12 q7C @32 GAIN 2 y8 (10)[>g6g24r12f24r12g24r12f24r12g12a+24r12g8
+g24f24r12g24r12a+12f24]1 r3r4
+(10) r2
+r8
+ q7A @40 GAIN 1 y10 (11)[g+8.d+8.>d+8.d8.<a+8
+>c+8.c8.<g+4.r4.
+g+8.d+8.>d+8.d8.<a+8
+>c+8.c8.<f+4.]1 r4.
+(11) r4
+@42 c1
+<c2..r8
+>c2<g4r4
+>g2^6r3
+d+2a+2
+g2r2
+c2<g4r4
+>g2f2
+d+2r2
+f2a+2
+g1
+r2>d+4d4
+#1 o5 q7C
+y12 (22)[GAIN 2 @30 <g12g24f12g24r12g24f12g24r12g24d+24f24g24a+12a+24g12g24
+g12g24f12g24r12g24f12g24r12g24d+24f24g24a+12>d6]2
+/$DF (22)
+<g12g24f12g24r12g24f12g24r12g24d+24f24g24a+12a+24g12g24
+g12g24f12g24r12g24f12g24>d+24d24d+24d24c24d24c24<a+24>c24<a+24g24f24
+@42 GAIN 1 $DE $40 $10 $40 $FA $03 $80 [c1^4
+r2.
+d+1^4
+r2.]2
+f1^4
+r2.
+d+1^4
+r2.
+c1^4
+r2.
+d+1^4
+r2r3
+q7C GAIN 2 y12 (20)[@32 d+6d+24r12d24r12d+24r12d24r12d+12g24r12d+8
+d+24d24r12d+24r12g12d24]1 r8 @40 q76 $EE $1A >a+8.a8.
+c12 $EE $00 (20) r2
+@42 GAIN 1 y12 [q7E <<g+2.r1
+r4
+f+2.r1
+r4]2
+g1
+r1
+@40 GAIN 2 q7A >g2r4 (21)[g12g24r12g24r12]1 
+g24g4.r4g12g24r12g24
+r12d+24d+4.r4d+12d+24r12d+24
+r12d24d4.d8d8<g8g8
+>g2r4g12g24g12g24r12g24g4.r4
+(21) g24g4.r4
+(21) a+24a+4.>d2
+c1
+<g4g4g4g4
+#2 o5 q7C $FA $03 $80 $DE $40 $10 $40
+(0)[r2]8
+/(0)8
+@42 GAIN 1 y8 [<g1^4
+r2.
+a+1^4
+r2.]2
+a1^4
+r2.
+[g1^4
+r2.]2
+a+1^4
+r1..
+@40 q7A y10 >>c4<g4a+8.a8.c8
+d+2r1.
+@42 q7E y8 [<d+2.r1
+r4
+c+2.r1
+r4]2
+c1
+r1
+@40 GAIN 2 q7A >c2r4c12c24r12c24
+r12<a+24a+4.r4a+12a+24r12a+24
+r12g+24g+4.r4g+12g+24r12g+24
+r12g24g4.g8f8d+8d8
+>c2r4c12c24c12c24
+r12d24d4.r4d12d24r12d24
+r12d+24d+4.r4d+12d+24r12d+24
+r12f24f4.a+2
+g1
+c4c4d+4d4
+#3 o4 y10 $FA $03 $FF $F4 $03
+r1
+r1
+r1
+r12
+@34 q7E y5 g6 y8 f4 y12 d8 y15 c8 y10 <K24e24e24S48e12^48
+/(40)[K4S4K8e8S4]1
+(41)[K6^24e24S6^24K24e8e8S4]1
+(40)
+K4S6^24K24e8e8S8e24e24e24
+[[
+(41)
+(42)[K6^24e24S4K8e8S8K8]1
+]]6
+(41)
+K6^24e24S4K8e8S8 @34 y15 a12a24
+y10 (41)
+K6^24e24S4K24e24e24e8S8e24e24e24
+[[(41)
+(42)]]2
+(43)[K8e12e8S8K24e2
+e8e12e8e8e24e4e4
+e8e12e8S8K24e6^24e24S4
+K12S6e4K12e24S8]1 K12e24S8
+(43) @34 y8 >d24 y9 c24 y10 <b24 y11 a24 y12 g24f24
+y10 (44)[K4S6^24K8e24e8S4]1
+K4S6^24K8e24e8S8e12e24
+(44)7
+K4S6^24K8e24e8S8 @34 y5 >c24 y10 <b24 y15 a24
+y10 K4S6^24K8e24e8S8K12e24
+e4e4S24e24e24e24e24e24e24e24e24e24e24e24
+#7 @32 o3 q7A y10 $FA $03 $FF $F4 $03
+r1
+r1
+(50)[CH8e12e24e8e12e24e8e12e24e8e12e24]2
+/(53)[>CR4<CH8e12e24e8e12e24e8e12e24]1
+(50)
+e8e12e24e8e12e24e8e8OH8CH8
+e8e12e24e8e12e24OH8CH12e24OH8CH12e24
+(50)
+(51)[e8e12e24e8e12e24e8e12e24e8OH12CH24]1
+(50)
+(52)[e8e12e24e8e12e24e8e12e24OH8CH12e24]1
+[[(50)
+(51)]]3
+(50)
+(52)
+(50)
+(51)
+(53)
+(50)2
+(52)
+(50)
+(51)
+(53)
+(51)
+(50)
+e8e12e24e8e12e24OH8CH12e24e12OH12CH24OH24
+(50)
+(51)
+(50)2
+(53)
+(52)
+(53)
+(50)3
+(54)[OH8CH12e24e8e12e24e8e12e24e8e12e24]1
+(50)
+(54)
+OH8CH12e24e8e12e24e8OH12CH24e8OH12CH24
+(53)
+(51)
+#5 @31 o6 q7A y8 GAIN 2 $FA $03 $80 $DE $10 $10 $40
+(60)[c12c24<a+12>c24r12c24<a+12>c24r12c24<g24a+24>c24d+12d+24d12<a+24
+>c12c24<a+12>c24r12c24<a+12>c24r12c24<g24a+24>c24g4]2
+/$FA $02 $00 (60)
+(61)[c12c24<a+12>c24r12c24<a+12>c24r12c24<g24a+24>c24d+12d+24d12<a+24
+>c12c24<a+12>c24r12c24<a+12>c24g24f24g24f24d+24f24d+24d24d+24d24c24<a+24]1
+[[
+(60)3
+(61)]]2
+(60)2
+$FA $02 $0C (62)[<g+24d+24g+24a+24g+24a+24>c+24<a+24>c+24d+24c+24d+24g+24d+24g+24a+24g+24a+24>c+24<g+24>c+24d+24<g+24>d+24]1
+g+8d+8 q78 g+8d+8 q76 g+8d+8 q74 g+8d+8
+ q7A (63)[<<f+24c+24f+24g+24f+24g+24a+24g+24a+24>c+24<a+24>c+24f+24c+24f+24g+24f+24g+24a+24f+24a+24>c+24<f+24>c+24]1
+f+8c+8 q78 f+8c+8 q76 f+8c+8 q74 f+8c+8
+ q7A (62)
+ q78 (62)
+ q7A (63)
+ q78 (63)
+r1.
+ q7A (64)[<g24c24g24>c24<g24>c24<g24c24g24c8
+r2g24c24g24>c24<g24>c24<g24c24g24c8
+r1]1
+r1
+r1.
+(64)
+(65)[f4d4<a+4g4
+c2g2
+c4g4>d+4]1 a+4
+#6 @31 o5 y12 GAIN 2 $EE $1A $DE $10 $10 $40 q7A
+(70)[$FA $03 $80 g12g24f12g24r12g24f12g24r12g24d+24f24g24a+12a+24g12g24
+g12g24f12g24r12g24f12g24r12g24d+24f24g24a+12>d6]2
+/$FA $02 $00 (70)
+(71)[<g12g24f12g24r12g24f12g24r12g24d+24f24g24a+12a+24g12g24
+g12g24f12g24r12g24f12g24>d+24d24d+24d24c24d24c24<a+24>c24<a+24g24f24]1
+[[(70)3
+(71)]]2
+(70)2
+r4 
+q78 $FA $02 $0C $FA $03 $00 (62) >g+8d+8 q76 g+8d+8 q74 g+8d+8 q72 g+8d+8 
+q78 (63) f+8c+8 q76 f+8c+8 q74 f+8c+8 q72 f+8c+8 
+q78 (62) 
+q76 (62) 
+q78 (63) 
+q76 (63) r1
+r4.
+ q78 (64)
+r1
+r1.
+(64)
+(65) r8.
+r64
+#4 @39 o4 q7C y10 GAIN 2 $F4 $03
+r1
+r1
+c1..
+<g12g6
+/(80)[>c12c24<g8a+8>c12c24r3r4
+c24r8c8r8<a+24r12a+24r12a+24r12g12a+24]1
+>c12c24<g8a+8>c12c24r3r4
+c24r8c8r8<a+24r12a+24r12a+24r24g6
+(80)10
+[g+8g+12g+24g+12>g+24r12<g+2^24
+g+4g+4d+4g+4
+f+8f+12f+24f+12>f+24r12<f+2^24
+f+2.f+12>f+24<g12>g24]2
+[<c12c24c24r12c8d12d+24r12c8c24c12d24d+8]11
+c12c24c24r12c8d12d+24g8r8g4

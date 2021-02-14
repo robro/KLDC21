@@ -1,0 +1,206 @@
+#amk 2
+
+#SPC
+{
+    #game    "Mega Man X5"
+    #author  "Remixer : JX"
+    #comment ""
+    #title "Izzy Glow(MMX2 Style)"
+}
+
+#path "IzzyGlow(MMX2)"
+
+#samples
+{
+    #optimized
+    "1d.brr"
+    "2a.brr"
+    "04_saw.brr"
+    "2e.brr"
+    "25.brr"
+    "27.brr"
+    "Kick.brr"
+    "17 lowguitar.brr"
+    "Hi-Hats.brr"
+    "1f hit.brr"
+}
+
+#instruments
+{
+    "17 lowguitar.brr"            $ff $ec $b6 $07 $94
+    "2a.brr"                      $ff $ec $b8 $23 $35
+    "Kick.brr"                    $ff $e0 $b8 $08 $9d
+    "1f hit.brr"                  $ff $f3 $b8 $08 $9d
+    "Hi-Hats.brr"                 $ff $f3 $b8 $07 $A8
+    "27.brr"                      $ff $f3 $b8 $07 $8a
+    "1d.brr"                      $ff $f6 $b1 $18 $00
+    "04_saw.brr"                  $ff $e0 $b5 $07 $f5
+    "25.brr"                      $ff $e0 $b8 $0b $84
+    "2e.brr"                      $ff $e0 $b8 $14 $c0
+}
+
+w150 t52
+
+$F4 $02
+
+(!900)[$F6$05$FF]
+(!901)[$F6$05$00]
+(!902)[$F6$15$FF]
+(!903)[$F6$15$00]
+(!904)[$F6$25$FF]
+(!905)[$F6$25$00]
+(!906)[$F6$35$FF]
+(!907)[$F6$35$00]
+(!908)[$F6$65$FF]
+(!909)[$F6$65$00]
+
+$EF $47 $A5 $5B
+$F1 $02 $3C $01
+$F5 $34 $33 $00 $D9 $E5 $01 $FC $EB
+
+"_8 = =23 q7f ^=1"
+"_16 = =11 q7f ^=1"
+
+"K = @32 v224"
+"Ht = @33 v162"
+"R = @34 v162"
+"S = @38 v224"
+
+"vib = p0,16,60"
+
+
+#0 l16 q7f (!900,-1) (!901, 3) o4 r32 / @30 v118
+    
+    (70)[a8 > c < a > cd8.< a > erd+dc8.]
+    (71)[< a8 > c < a > cd8.< f4g4]
+    (70) (72)[a8 > c < a > cd < f2r8]
+    
+    (70) (71) (70) > d+dcdc < a8.^2
+    [[(70) (71) (70) (72)]]2
+    
+    d1<a4r8a8r8a8r8a8>c+8r8c+8c+8r8c+8 c+8c+8< g+4 r8g+8r8g+8g+8g+r
+    f2r8f8r8f8g+4r8
+    g+8r8[[g+8]]3 [[a+8r8a+8]]2 a+8a+8e1
+    
+    >> v138 [edcdc < a > c < agage4raga > c8. < a2r8aga > c < b > cd8edeg4raga > c8. < a2^16r]2 ^1 
+
+
+#1 l16 (!902,-1) (!903, 3) o4 r32 / q7f 
+    
+    @30 v118 
+    (60)[e8gega8.ebra+ag8.] (61)[e8gega8.c4d4]
+    (60) (62)[e8gegac2r8]
+    (60) (61) (60) a+agage8.^2
+    [[(60) (61) (60) (62)]]2
+    
+    r @36 v122 <<< 
+    [a32r32arar]3 [ararara32r32]2 ar [rg+32r32g+rg+]3r > [d+rd+rd+rd+32r32]2 d+r
+    
+    @30 v118 >> c2r8c8r8c8d+4r8d+8r8d+8d+8d+8 [[f8r8f8]]2 f8f8< b1
+    
+    @39 v144 <
+    edcdc<a>c<agage4raga>c8.<a2r8aga>c<b>cd8edeg4raga>c8.<a2^16r>
+    edcdc<a>c<agage4raga>c8.<a2r8aga>c<b>cd8edeg4raga>c8.<a2^16r
+    a @36 < [[e]]14 e=11 q76 ^=1
+
+
+#2 l16 q7f (!904,-1) (!905, 3) o1 r=6 / @36 v162
+    
+    [[r1]]4
+    reaaea > eeaeeaaeaaea > e < eaeeg8ee8eee8. < eaaea > eeaeeaaeaa^2.. 
+    @37 v115 > e8
+    
+    b4. vib ^4. $DF gea4 vib ^4 $DF d8
+    r8dd+dc8.<a4 vib ^4. $DF r8ga > cd^4 vib ^2 $DF r8e8
+    
+    b4. vib ^4. $DF ge > c8
+    vib ^8 $DF < a8 vib ^8 $DF r4 > dd+dc8.
+    f=2 $DD $06 $06 $AB ^=46 vib ^2 $DF edcd8.
+    d=2 $DD $03 $03 $A8 ^=22r8 @39 v144 <<< a > c< brbr > drer
+    
+    ^4 v181 > e4d4c4<b4.e8^2
+    >c8.<a+8.>c8c+8.d+8.f8g4g+8d+4<a+4d+8
+    
+    @37 v115 > 
+    g=2 $DD $06 $06 $A1 ^=22 vib ^8 $DF > e8. vib ^8. $DF d8e8 < b8 > 
+    c8 vib ^8 $DF g4 vib ^4 $DF g=2 $DD $06 $06 $AC ^=22 vib ^8 $DF
+    g8. vib ^8. $DF f8. vib ^8. $DF f=2 $DD $06 $06 $AB ^=22 vib ^8 $DF
+    e4. vib ^8^2
+    
+    @39 v144 $DF <<< 
+    eagagegededc4redeg8.e8^4.r8edegggggaga>c4r< eceg8.e8^4..r>
+    eagagegededc4redeg8.e8^4.r8edegggggaga>c4r< eceg8.e8^4..r
+    > er4..^2
+
+
+
+#3 l4 (!906,-1) (!907, 3) @35 r32 o4 / r v162 q7f
+    
+    [c2]13 c2^8c16c16
+    ^16c16cc16c^16
+    *22 c^16c8.c8.c^16
+    *6 c.cc4.
+    [c2c2c.c8.c^8.] c2c.ccc8.c^8.
+    * c2c.ccc8.c2^16 v196 c_16 c_8 c_16 c=47 q7f ^=1 c_16 c_16
+
+
+
+#4 l16 q7f r32 / o1 @31 v224
+    
+    (80)[a8 > c < a > cd8.< a > erd+dc8.] (81)[< a8 > c < a > cd8.< f4g4]
+    (80) (82)[a8 > c < a > cd < f8^4.r8]
+    (80) (81) (80) > d+dcdc < a8.^2
+    [[(80) (81) (80) (82)]]2 >
+    
+    [[dr]]3 ddrddr drdd < [[araa]]2 [[r8aa]]2
+    > [c+rc+rc+rc+c+]2 < [[g+r]]3 [[g+g+r8]]2 g+g+
+    
+    [frfrfrf]2 f8 [g+rg+rg+rg+]2 g+8
+    a+ra+r > a+8 < a+a+ra+ra+r > a+ < a+8 > ererereerereree8
+    
+    v202 [edcdc < a > c < agage4raga > c8. < a8^4.r8
+    aga > c < b > cd8ede < g4raga > c8. < a8^4^8.r >]2 ^1<
+
+
+
+#5 l16 q7f r32 o4 / 
+    
+    (90)[K c Ht c R c Ht c K c Ht c R c Ht c]14
+    K c2 R c8.c K c32c32 v196 c32c32 v212 c32c32 v224 c32c32
+    
+    (91)[K c Ht c R c Ht c S c8 R c Ht c]7 (93)[K c Ht c R c Ht c K c S ccc]
+    (91)7 (93)
+    
+    (92)[K c Ht c R c8 S c8 Ht c R c]7 K c Ht c R c8 S c8 Ht c S c
+    (92)7 K c Ht c S c v224 c K cc S cc
+    
+    (90)3 (94)[K c Ht c S c Ht c R c S c R c Ht c]
+    (90)2 (95)[K c Ht c S cc K c Ht c S cc]
+    K c Ht c S cc K c S ccc
+    
+    (90)3 (94) (90)2 (95)
+    K c Ht c S cc [[c32]]8 K c8 R [[c]]13 c_16
+
+
+#6 l16 q7f (!908,-1) (!909, 3) o4 r32 / 
+    
+    [[r1]]7 r2^4. @37 v115 e8
+    
+    b4. vib ^4. $DF gea4 vib ^4 $DF d8r8dd+dc8.
+    < a4 vib ^4. $DF r8ga > cd^4 vib ^2 $DF r8e8
+    
+    b4. vib ^4. $DF ge > c8
+    vib ^8 $DF < a8 vib ^8 $DF r4 > dd+dc8.
+    f=2 $DD $06 $06 $B7 ^=46 vib ^2 $DF edcd
+    ^8d=2 $DD $03 $03 $B4 ^=22r8 @39 v144 <<< a > c < brbr > drer
+    
+    ^4c4 < b4a4g4.c8^2f8.d+8.f8g8.g+8.a+8>c4c+8 < g+4g4c8
+    
+    @37 v115 >> 
+    g=2 $DD $06 $06 $AD ^=22 vib ^8 $DF > e8. vib ^8. $DF d8e8 <b8> 
+    c8 vib ^8 $DF g4vib ^4 $DF g=2 $DD $06 $06 $B8 ^=22 vib ^8
+    $DF g8. vib ^8. $DF f8. vib ^8. $DF f=2 $DD $06 $06 $B7 ^=22 vib ^8
+    $DF e4. vib ^8^2
+    
+    $DF [[r1]]9
+

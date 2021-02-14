@@ -1,0 +1,186 @@
+#amk 2
+
+#SPC
+{
+    #game    "Touhou 7"
+    #author  "Remixer : JX"
+    #comment   "Blizzard Kuwanger"
+    #title "Paradise ~ Deep Mountain(MMX)"
+}
+#path "TH7Stage1(MMX)"
+
+#samples
+{
+    #optimized
+    "12.brr"
+    "14.brr"
+    "15.brr"
+    "16.brr"
+    "18.brr"
+    "19.brr"
+    "Hit.brr"
+    "bass.brr"
+    "sawtooth.brr"
+    "synth strings.brr"
+}
+
+#instruments
+{
+    "synth strings.brr"	$FF $E0 $B8 $04 $80
+    "bass.brr"		$FF $ED $B8 $04 $79
+    "15.brr"		$FF $E0 $B8 $0F $58
+    "sawtooth.brr"		$FF $F5 $B8 $03 $FA
+    "16.brr"		$FF $E0 $B8 $0F $5E
+    "Hit.brr"		$FF $E8 $B4 $07 $A5 
+    "18.brr"		$FF $E0 $B8 $07 $E5
+    "14.brr"		$FF $F3 $B8 $05 $C4
+    "12.brr"		$FF $F6 $B8 $07 $7E
+    "19.brr"		$FF $E0 $B4 $06 $02
+}
+
+w130 t58
+
+$F4 $02
+
+(!900)[$F6$05$FF]
+(!901)[$F6$05$00]
+(!902)[$F6$15$FF]
+(!903)[$F6$15$00]
+(!904)[$F6$25$FF]
+(!905)[$F6$25$00]
+(!906)[$F6$35$FF]
+(!907)[$F6$35$00]
+
+$ef $2f $9d $63
+$f1 $03 $44 $01
+$f5 $34 $33 $00 $d9 $e5 $01 $fc $eb
+
+"Cy = @37 v224"
+"Ht = @38 v118"
+"K = @32 $ef $0f $9d $63"
+"S = @34 $ef $2f $9d $63"
+
+
+
+#0 l16 (!900,-1) (!901, 3) q7f @30 v144 o3 
+    (80)[b8r8 > d8r8
+    f+8 p0,12,30 ^4r8 $DF e8r8a8r8
+    f+8 p0,12,30 ^4r8 $DF e8r8b8r8
+    f+8 p0,12,30 ^4r8 $DF > c+8 p0,12,30 ^4r8
+    $DF < b=6 > c+=6d8. p0,12,30 ^4. r8 $DF << br > c+r
+    d8 p0,12,30 ^4r8 $DF < f+8r8 > d8r8
+    c+8 p0,12,30 ^8r8 $DF e8 p0,12,30 ^8r8 $DF f+8]
+    r8 < b2r1.
+    r8 $EE $45 @33 v70 >> 
+    (81)[bbf+abf+rarbf+abbf+a] bbf+abf+rarbf+abb 
+    / $EE $00 @35 <<<
+    
+    (40)[v181 b8 v144 b8 v91 b8]2 r4 v181 b8 @39 v144 > f+8b8 > f+8
+    e8.d8.c+8 < b1 @35 v181 < g8 @39 v144 > f+8b8 > d8c+8. < b8.a8
+    f+1f+8b4b4. > d4c+1c+8.f+8.e8f+2
+    @35 << 
+    (40)2 r4
+    v181 b8 @39 v144 > f+8b8 > f+8
+    e8.d8.c+8 < b1
+    @35 v181 < g8 @39 v144 > f+8b8 > d8
+    c+8. < b8.a8f+1f+8b4b4. > d4c+1c+8.f+8.e8f+2
+    
+    r $EE $25 @33 v98 > 
+    (81)15 bbf+abf+rarbf+abbf+
+
+
+
+
+#1 l16 (!902,-1) (!903, 3) q7f r @30 v118 o3 (80) r
+    $EE $25 @33 > 
+    (81)2
+    t60 $EE $00 (81)2 /
+    
+    (81)6 (82)[>> c+c+ < f+a+ > c+ < f+ra+] (83)[r > c+ < f+a+ > c+c+ < f+a+]
+    (82)(83)
+    (81)6 (82)(83)(82)
+    @37 v162 < c4c4
+    @33 v124 > (81)16
+
+
+
+
+#2 l8 (!904,-1) (!905, 3) q7f $EE $25 o3 r2 @30 v144
+    
+    [d4rdrd4re4rere4r] f+4rf+rf+4rg+4rg+rg+4r *
+    v162 [[d16r16ddd]]8 / @36 v208 >
+    
+    (60)[f+4rf+rf+ef+ < br16b=60rb > c+df+4rf+rf+]
+    (61)[abf+r16f+=60rdde] (60) (72)[a+b> c+r16f+r4r16] (62)[r < e4]
+    
+    (70)[f+16r16f+16f+16rf+rf+]
+    (71)[ef+ < br16b=60 rb16f+16 > c+16 < b16 > d16e16]
+    (70) (75)[abf+r16f+=60 r < b16 > f+16e16d16c+16e16]
+    (70)(71)(70)(72) r v187 < a4
+    
+    (73)[b16r16b16b16rbrbabf+r16f+=60 rf+f+a]
+    (74)[b16r16b16b16rbr > dc+ < af+r16f+=60 rf+f+a]
+    (73) b16r16b16b16rbr > dc+ < abr16b=60 rf+f+a
+    (73)(74)(73)
+    b16r16b16b16rbr > dc+ < abr16b4r16
+    @35 v208 < b16r16b16r16b16br16
+
+
+
+
+
+#3 l8 (!906,-1) (!907, 3) q7f o2 r2
+    
+    @30 v144 
+    [g4rgrg4ra4rara4r] b4rbrb4r > d4rdrd4r < *
+    v162 
+    [b16r16 > f+f+f+ < b16r16 > g+g+g+ < b16r16 > aaa < b16r16 > g+g+g+ <]2> /
+    
+    $EE $25 @36 v131 > d 
+    (60)(61)(60)(72)(62)(70)(71)(70)(75)
+    (70)(71)(70)(72) v187 < f+4
+    
+    $EE $00 
+    [g16r16g16g16rgrgf+gdr16d=60rddf+]
+    g16r16g16g16rgrbaf+dr16d=60rddf+ *
+    g16r16g16g16rgrbaf+f+r16f+=60r > dde
+    
+    [f+16r16f+16f+16rf+rf+ef+ < br16b=60 r > ddef+16r16f+16f+16rf+r]
+    baedr16d=60rdde * > dc+ < abr16b4r16
+    @35 v208 < d16r16d16r16d16dr16
+
+
+
+
+#4 l16 o2 q7f [[r2]]9 @31 v224 
+
+    g8r4g8r2a8r4a8 [[r2b8r4b8]]4
+    b > bf+ab < b > f+d < /
+    
+    (90)[ b8b8b8 bbrbbr brbb]2
+    (91)[ g8g8g8 ggrggr grgg]2
+    
+    (92)[ e8e8e8 eereer eree]2
+    (93)[ f+8f+8f+8 f+f+rf+f+r f+rf+f+]2
+    
+    (90)2 (91)2 (92)2 (93)2
+    
+    (94)[ g8g8g8 ggrggr araa] (95)[ b8b8b8 bbrbbr brbb]  (94)(95)
+    (92)(93) [[(94)(95)]]3
+    (92)(93)(94)(95)
+
+
+
+#5 l16 q7f o5 [[r2]]13
+    ^ $EE $25 @33 v91 (81)3
+    bbf+abf+r
+    a $EE $00 S v224 << cc8c8cc /
+    [ [[K c4 S c4]]15 K c S cc8c8cc]4
+
+
+
+
+#6 l16 q7f o3 [[r2]]9
+    
+    @32 v224 [[c4]]22 c8.c=60 > /
+    [Cy c4 Ht [[c]]60]8

@@ -1,0 +1,324 @@
+#amk 2
+
+#spc
+{
+    #title   "Pillars of Creation"
+    #game    "Tower of Heaven"
+    #author  "flashygoodness"
+    #comment "Ported by KevinM"
+}
+
+#path "pillars-of-creation"
+
+#samples
+{
+    #default
+    "p50/o5 low.brr"
+    "p50/o5 high.brr"
+    "p50/o6 low.brr"
+    "p50/o7 low.brr"
+    "p50/o7 high.brr"
+    "p50/o2 low.brr"
+    "p25/o2 low.brr"
+    "p25/o2 high.brr"
+    "p25/o3 low.brr"
+    "p25/o4 low.brr"
+    "p25/o5 high.brr"
+    "tri/o4 low.brr"
+    "Hi-Hat.brr"
+}
+
+#instruments
+{
+    ; Shoutouts to musicalman for the hq wave samples!
+    "p50/o5 low.brr"  $ff $ee $7f $04 $00 ; @30 \
+    "p50/o5 high.brr" $ff $ee $7f $03 $00 ; @31 |
+    "p50/o6 low.brr"  $ff $ee $7f $04 $00 ; @32 | lead
+    "p50/o7 low.brr"  $ff $ee $7f $04 $00 ; @33 |
+    "p50/o7 high.brr" $ff $ee $7f $03 $00 ; @34 /
+    "p25/o2 low.brr"  $ff $e0 $7f $20 $00 ; @35 \
+    "p25/o2 high.brr" $ff $e0 $7f $18 $00 ; @36 | bass
+    "p25/o3 low.brr"  $ff $e0 $7f $10 $00 ; @37 /
+    "p25/o4 low.brr"  $ff $e0 $7f $08 $00 ; @38 \ arpeggios
+    "p25/o5 high.brr" $ff $e0 $7f $03 $00 ; @39 /
+    "tri/o4 low.brr"  $ff $e4 $7f $08 $00 ; @40 intro sweep
+    "p50/o2 low.brr"  $cf $9a $7f $20 $00 ; @41 kick
+    "Hi-Hat.brr"      $ff $f9 $b8 $07 $a8 ; @42 closed hi-hat
+    n18               $bf $98 $b8 $00 $00 ; @43 \ snare
+    n18               $be $98 $b8 $00 $00 ; @44 /
+    n1d               $fe $ee $b8 $00 $00 ; @45 intro swoosh
+    n10               $fc $ea $b8 $00 $00 ; @46 low rumble
+}
+
+;==================;
+; Volume  /  Tempo ;
+;==================;
+   w100       t48
+
+;==================;
+;      Macros      ;
+;==================;
+"Po5l  = @30 o5"
+"Po5h  = @31 o5"
+"Po6l  = @32 o5"
+"Po7l  = @33 o5"
+"Po7h  = @34 o5"
+"Po2l  = @35 o2"
+"Po2h  = @36 o2"
+"Po3l  = @37 o3"
+"Aro4l = @38 o4"
+"Aro5h = @39 o5"
+"To4l  = @40 o4"
+"Kc    = @41 o2 h6 q7f"
+"Ch    = @42 o4 q7f"
+"Sn    = @43 o4 h0 q7e"
+"Sn2   = @44 o4 h0 q7e"
+"Sw    = @45 o4"
+"Rmbl  = @46 q7d"
+"Vibr1 = $de$00$0e$18 $ea$18"
+"Vibr2 = $de$00$12$a0 $ea$28"
+"KcBnd = $eb$00$0a$f4"
+"SnR   = $f6$56$fd"
+"Det   = $ee$10"
+"EFB   = $f6$0d$"
+"FL    = y10 $dc$5f$12"
+"FR    = y10 $dc$5f$02"
+"_16   = =11 q7f ^=1"
+"_16e  = =11 q7e ^=1"
+"_8    = =23 q7f ^=1"
+"_8.   = =35 q7f ^=1"
+"_48r  = =3 $ed$7f$fe ^=1 $f4$09"
+
+;==================;
+;    Channel #0    ;
+;==================;
+#0 $f4$02
+$ef $dd $e4 $1c
+$f1 $03 $1a $01
+
+y13 l16
+v130 (04)[Po6l $ed$80$48 q7f bf+ec- q79 f+ec-c-]
+v170 (04)
+
+$f2 $c0 $dc $25
+$f1 $04 $1a $01
+
+v220 (04)
+v255 (04)
+
+/
+
+$f1 $05 $40 $01
+
+v200 (00)[Vibr1 q7f l8
+y12 Po6l c+ e f+ b4 e f+1^4
+y8 c+ e f+ b4 d+ e4]
+(01)[y10 Po7l e4 d+4 Po6l b4 g+4]
+(00)
+(02)[y10 Po7l e. d+. Po6l b. g+. b Po7l c_48r c+=20]
+(00)
+(01)
+(03)[Po7l c+2^8 Po6l b4 a g+2 f+2 g+1]
+(02)
+
+(05)[Vibr2 q7f
+y16 $dc$60$04 Po5l c+_16 e_16 Po5h g+_16 b_16 Po6l c+_16 Po5h b_16 g+_16 Po5l e_16
+$dc$60$10 c+_16 e_16 Po5h g+_16 b_16 Po6l c+_16 Po5h b_16 g+_16 Po5l e_16
+$dc$60$04 Po6l f+_16 e_16 c+_16 Po5h b_16 g+_16 f+_16 Po5l e_16 Po5h f+_16
+$dc$42$0a g+_16 b_16 Po6l c+_16 f+_8 Po5h b_16 Po6l c+2^8]
+(06)[Po6l y5 e_8. y8 d+_8. Po5h y10 b_8 y12 f+_8. Po5l y15 e_8. Po5h y12 b_8 Po5l y15 d+_8. y14 e_8. Po5h y15 f+_8]
+(05)
+(07)[Po6l y5 e_8. y8 d+_8. y10 a+_48r b=19 q7f ^=1 g+_8. f+_8. e_8 d+_8. e_8. f+_8]
+(08)[y16 $dc$60$04 Po6l c+_16 e_16 g+_16 b_16 Po7l c+_16 Po6l b_16 g+_16 e_16
+$dc$60$10 c+_16 e_16 g+_16 b_16 Po7l c+_16 Po6l b_16 g+_16 e_16
+$dc$60$04 Po7h f+_16 Po7l e_16 c+_16 Po6l b_16 g+_16 f+_16 e_16 f+_16
+$dc$42$0a g+_16 b_16 Po7l c+_16 Po7h f+_8 Po6l b_16 Po7l $f4$01 c+2^8]
+(09)[$f4$01 Po7l y5 e_8. y8 d+_8. Po6l y10 b_8 y12 f+_8. y15 e_8. y12 b_8 y15 d+_8. y14 e_8. y15 f+_8]
+(08) ^2 $f4$01 ^4
+
+y7 o5 l16
+v110 (04)
+v125 q7f bf+ec-
+
+$ef $dd $e4 $1c
+$f1 $03 $1a $01
+
+y13
+v135 (04)
+v175 (04)
+
+$f2 $c0 $dc $25
+$f1 $04 $1a $01
+
+v225 (04)
+v190 (04)
+
+;==================;
+;    Channel #1    ;
+;==================;
+#1
+(10)[v100 y10 $fa$03$00
+r1 $e8$90$e8 [[Sw c=5 $ed$7e$fc ^=1]]24 Sw v255 c4]
+
+/
+
+Ch v255 l16 $fa$03$ff
+[[ [c_16]111 c^1 ]]3 *112
+
+y13 $fa$03$00 $f4$03
+v100 (04)
+v120 (04)
+
+(10)
+
+;==================;
+;    Channel #2    ;
+;==================;
+#2
+y7 o5 l16 r4
+v150 (04)
+v190 (04)
+v235 (04)
+v255 q7f bf+ec-
+
+/
+
+v185 y10 l48 (20)[Aro4l
+o4 [[c+ e g+]]24
+o3 [[b > d+ f+ <]]8
+o3 [[g+ b > e <]]24
+o4 [[e f+ b]]8]
+(21)[
+o4 [[c+ e g+]]24
+o3 [[b > d+ f+ <]]8
+o3 [[g+ b > e <]]32]
+(20)
+(22)[
+o4 [[c+ e g+]]16
+o4 [[c+ e f+]]16
+o4 [[c+ d+ g+]]16]
+
+v205 (23)[Aro5h $fa$03$40 $f4$01
+> [[e < e >]]4 e
+[[d+ < d+ >]]4 d+
+< [[b < b >]]4 b
+[[g+ < g+ >]]4 g+
+b < b > b < b > b < b >
+> c+ < c+ > c+ < c+ > c+ < c+ >
+$f4$01 $fa$03$00]
+
+v185
+(20)3
+(24)[
+o4 [[c+ e g+]]24
+o3 [[b > d+ f+ <]]8
+o3 [[g+ b > e <]]16 $e8$60$00 [[g+ b > e <]]16]
+
+y7 o5 l16
+v125 Po6l q79 f+ec-c-
+v130 (04)
+v170 (04)
+v220 (04)
+v255 q7f bf+ec-
+
+;==================;
+;    Channel #3    ;
+;==================;
+#3
+r1
+
+(33)[To4l v130 y10 o4 $e8$90$ff
+f4 $dd$03$bd <<c ^4 $ed$7f$e8 ^2]
+
+/
+
+v210
+[[ (30)[Po2h FL a1. FL b2 Po3l FL c+2.. Po2h FL f+_16 FL g+_16 Po2l FL] (31)[c+2 Po2h FL b2] ]]3
+FL a1 FL f+1 FL g+1 $ed$80$b9 ^1
+[[ (30) (31) ]]3
+(30) $ed$0f$66 c+1 $ed$7f$f3 ^1
+
+(33)
+
+;==================;
+;    Channel #4    ;
+;==================;
+#4
+r1
+
+(40)[r=5 EFB1b ^=5 EFB1c ^=5 EFB1d ^=5 EFB1e
+^=5 EFB1f ^=5 EFB20 ^=5 EFB21 ^=5 EFB22
+^=5 EFB23 ^=5 EFB24 ^=5 EFB25 ^=5 EFB26
+^=5 EFB27 ^=5 EFB28 ^=5 EFB29 ^=5 EFB2a
+^=5 EFB2b ^=5 EFB2c ^=5 EFB2d ^=5 EFB2e
+^=5 EFB2f ^=5 EFB30 ^=5 EFB31 ^=5 EFB32
+^=5 EFB33 ^=5 EFB34 ^=5 EFB35 ^=5 EFB36
+^=5 EFB37 ^=5 EFB38 ^=5 EFB39 ^=5 EFB3a
+^=5 EFB3b ^=5 EFB3c ^=5 EFB3d ^=5 EFB3e
+^=5 EFB3f ^=5 EFB40 ^=2]
+
+/
+
+v210 $ee$10 r=1
+[[ (41)[Po2h FR a1. FR b2 Po3l FR c+2.. Po2h FR f+_16 FR g+_16 Po2l FR] (42)[c+2 Po2h FR b2] ]]3
+FR a1 FR f+1 FR g+1 $ed$80$b9 ^1
+[[ (41) (42) ]]3
+(41) $ed$0f$66 c+1 $ed$7f$f3 ^1
+
+(40)
+
+;==================;
+;    Channel #5    ;
+;==================;
+#5
+(99)[r2]4
+
+/
+
+KcBnd $fa$03$78 y10 (50)[Kc v255 l8
+     c c Sn c. Kc c Sn c_16e Kc c Sn c Kc c
+     c c Sn c. Kc c Sn c_16e Kc c_16 [[Sn2 c=5 SnR ^=1]]2 Sn c Kc c]3
+(52)[c c Sn c. Kc c Sn c_16e Kc c Sn c Kc c]
+(51)[c Sn c_16e Kc c. Sn c $e8$60$50 [[Sn2 c=5 SnR ^=1]]16]
+(50)3
+(53)[Kc c4 c4 c. c. c]
+(51)
+
+(50)3
+(52)
+(51)
+(50)2
+(53)3
+
+EFB4c
+
+$fa$03$00 $f4$03
+Rmbl c1 $ed$7f$f2 ^1^1
+
+;==================;
+;    Channel #6    ;
+;==================;
+#6
+(99)4
+
+/
+
+v135 Det r8.
+(00) (01) (00) (02) (00) (01) (03) (02)
+(05) (06) (05) (07) (08) (09) (08) ^2 $f4$01 ^2
+
+(99)5
+
+;==================;
+;    Channel #7    ;
+;==================;
+#7
+(99)4
+
+/
+
+v125 y9 Det r=34
+(20) (21) (20) (22) (23)
+(20)3 (24)
+
+(99)4

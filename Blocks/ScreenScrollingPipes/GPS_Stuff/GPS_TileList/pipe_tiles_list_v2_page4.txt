@@ -1,0 +1,187 @@
+;SSPs - Page 4
+;;2-way pipe caps
+;;;Vertical pipe caps
+0400:0130		SSP_Tiles/caps/enterable/default/top_vertical_pipe_cap_L.asm
+0401:0130		SSP_Tiles/caps/enterable/default/top_vertical_pipe_cap_R.asm
+0410:0130		SSP_Tiles/caps/enterable/default/bottom_vertical_pipe_cap_L.asm
+0411:0130		SSP_Tiles/caps/enterable/default/bottom_vertical_pipe_cap_R.asm
+0420:0130		SSP_Tiles/caps/enterable/default/top_vertical_pipe_cap_small.asm
+0430:0130		SSP_Tiles/caps/enterable/default/bottom_vertical_pipe_cap_small.asm
+
+;;;Horizontal pipe caps
+0402-0403:130		SSP_Tiles/pass_if_in_pipe.asm
+0412:0130		SSP_Tiles/caps/enterable/default/left_horizontal_pipe_cap_B.asm
+0413:0130		SSP_Tiles/caps/enterable/default/right_horizontal_pipe_cap_B.asm
+0421:0130		SSP_Tiles/caps/enterable/default/left_horizontal_pipe_cap_small.asm
+0422:0130		SSP_Tiles/caps/enterable/default/right_horizontal_pipe_cap_small.asm
+
+;;1-way pipe caps
+;;;Vertical caps
+;;;;Vertical pipe cap upwards travel
+0404:0130		SSP_Tiles/caps/exit_only/top_vertical_pipe_cap_L_exit.asm
+0405:0130		SSP_Tiles/caps/exit_only/top_vertical_pipe_cap_R_exit.asm
+0414:0130		SSP_Tiles/caps/enterable/default/bottom_vertical_pipe_cap_L.asm
+0415:0130		SSP_Tiles/caps/enterable/default/bottom_vertical_pipe_cap_R.asm
+0424:0130		SSP_Tiles/caps/exit_only/top_vertical_pipe_cap_small_exit.asm
+0434:0130		SSP_Tiles/caps/enterable/default/bottom_vertical_pipe_cap_small.asm
+;;;;Vertical pipe cap downwards travel
+0406:0130		SSP_Tiles/caps/enterable/default/top_vertical_pipe_cap_L.asm
+0407:0130		SSP_Tiles/caps/enterable/default/top_vertical_pipe_cap_R.asm
+0416:0130		SSP_Tiles/caps/exit_only/bottom_vertical_pipe_cap_L_exit.asm
+0417:0130		SSP_Tiles/caps/exit_only/bottom_vertical_pipe_cap_R_exit.asm
+0425:0130		SSP_Tiles/caps/enterable/default/top_vertical_pipe_cap_small.asm
+0435:0130		SSP_Tiles/caps/exit_only/bottom_vertical_pipe_cap_small_exit.asm
+
+;;;Horizontal caps
+;;;;Top half of horizontal pipe caps
+0408-040B:0130		SSP_Tiles/pass_if_in_pipe.asm
+;;;;Horizontal pipe cap leftwards travel
+0418:0130		SSP_Tiles/caps/exit_only/left_horizontal_pipe_cap_B_exit.asm
+0419:0130		SSP_Tiles/caps/enterable/default/right_horizontal_pipe_cap_B.asm
+0426:0130		SSP_Tiles/caps/exit_only/left_horizontal_pipe_cap_B_exit.asm
+0427:0130		SSP_Tiles/caps/enterable/default/right_horizontal_pipe_cap_small.asm
+;;;;Horizontal pipe cap rightwards travel
+041A:0130		SSP_Tiles/caps/enterable/default/left_horizontal_pipe_cap_B.asm
+041B:0130		SSP_Tiles/caps/exit_only/right_horizontal_pipe_cap_B_exit.asm
+0436:0130		SSP_Tiles/caps/enterable/default/left_horizontal_pipe_cap_small.asm
+0437:0130		SSP_Tiles/caps/exit_only/right_horizontal_pipe_cap_B_exit.asm
+
+;;;Background Pipe caps (exit only, enterable caps should always be solid).
+04E0:0025		SSP_Tiles/caps/exit_only/top_vertical_pipe_cap_L_exit.asm
+04E1:0025		SSP_Tiles/caps/exit_only/top_vertical_pipe_cap_R_exit.asm
+04F0:0025		SSP_Tiles/caps/exit_only/bottom_vertical_pipe_cap_L_exit.asm
+04F1:0025		SSP_Tiles/caps/exit_only/bottom_vertical_pipe_cap_R_exit.asm
+04F2:0025		SSP_Tiles/caps/exit_only/left_horizontal_pipe_cap_B_exit.asm
+04F3:0025		SSP_Tiles/caps/exit_only/right_horizontal_pipe_cap_B_exit.asm
+04E4:0025		SSP_Tiles/caps/exit_only/top_vertical_pipe_cap_small_exit.asm
+04F4:0025		SSP_Tiles/caps/exit_only/bottom_vertical_pipe_cap_small_exit.asm
+04F5:0025		SSP_Tiles/caps/exit_only/left_horizontal_pipe_cap_B_exit.asm
+04F6:0025		SSP_Tiles/caps/exit_only/right_horizontal_pipe_cap_B_exit.asm
+
+;;Stems
+R0440-0455:0130		SSP_Tiles/pass_if_in_pipe.asm
+
+;;Turn corners
+0460-0463:0130		SSP_Tiles/pass_if_in_pipe.asm
+0470:0130		SSP_Tiles/turn_up-right.asm
+0471-0472:0130		SSP_Tiles/pass_if_in_pipe.asm
+0473:0130		SSP_Tiles/turn_right-down.asm
+0480-0483:0130		SSP_Tiles/pass_if_in_pipe.asm
+0490:0130		SSP_Tiles/turn_left-up.asm
+0491-0492:0130		SSP_Tiles/pass_if_in_pipe.asm
+0493:0130		SSP_Tiles/turn_down-left.asm
+
+;;;Turn special
+0464-0465:0130		SSP_Tiles/pass_if_in_pipe.asm
+0474:0130		SSP_Tiles/turn_special_L.asm
+0475:0130		SSP_Tiles/turn_special_R.asm
+0484:0130		SSP_Tiles/turn_special_small.asm
+
+;;;4-way “turn corner”
+04A2:0130		SSP_Tiles/pass_if_in_pipe.asm
+
+;;;Small turn corners
+04A0:0130		SSP_Tiles/turn_up-right_small.asm
+04A1:0130		SSP_Tiles/turn_right-down_small.asm
+04B0:0130		SSP_Tiles/turn_left-up_small.asm
+04B1:0130		SSP_Tiles/turn_down-left_small.asm
+
+;;;Background turn corners:
+04AE:0025		SSP_Tiles/turn_up-right_small.asm
+04AF:0025		SSP_Tiles/turn_right-down_small.asm
+04BE:0025		SSP_Tiles/turn_left-up_small.asm
+04BF:0025		SSP_Tiles/turn_down-left_small.asm
+04DC:0025		SSP_Tiles/turn_up-right.asm
+04DF:0025		SSP_Tiles/turn_right-down.asm
+04FC:0025		SSP_Tiles/turn_left-up.asm
+04FF:0025		SSP_Tiles/turn_down-left.asm
+;;;;Turn specials
+04AD:0025		SSP_Tiles/turn_special_small.asm
+049E:0025		SSP_Tiles/turn_special_L.asm
+049F:0025		SSP_Tiles/turn_special_R.asm
+
+;;Custom caps
+;;;No-items
+04A8:0130		SSP_Tiles/caps/enterable/no_items/top_vertical_pipe_cap_small.asm
+04B8:0130		SSP_Tiles/caps/enterable/no_items/bottom_vertical_pipe_cap_small.asm
+04B9:0130		SSP_Tiles/caps/enterable/no_items/left_horizontal_pipe_cap_small.asm
+04BA:0130		SSP_Tiles/caps/enterable/no_items/right_horizontal_pipe_cap_small.asm
+04A9:0130		SSP_Tiles/caps/enterable/no_items/left_horizontal_pipe_cap_small.asm
+04AA:0130		SSP_Tiles/caps/enterable/no_items/right_horizontal_pipe_cap_small.asm
+04AB:0130		SSP_Tiles/caps/enterable/no_items/top_vertical_pipe_cap_small.asm
+04BB:0130		SSP_Tiles/caps/enterable/no_items/bottom_vertical_pipe_cap_small.asm
+
+04C4:0130		SSP_Tiles/caps/enterable/no_items/top_vertical_pipe_cap_L.asm
+04C5:0130		SSP_Tiles/caps/enterable/no_items/top_vertical_pipe_cap_R.asm
+04D4:0130		SSP_Tiles/caps/enterable/no_items/bottom_vertical_pipe_cap_L.asm
+04D5:0130		SSP_Tiles/caps/enterable/no_items/bottom_vertical_pipe_cap_R.asm
+04C6:0130		SSP_Tiles/caps/enterable/no_items/top_vertical_pipe_cap_L.asm
+04C7:0130		SSP_Tiles/caps/enterable/no_items/top_vertical_pipe_cap_R.asm
+04D6:0130		SSP_Tiles/caps/enterable/no_items/bottom_vertical_pipe_cap_L.asm
+04D7:0130		SSP_Tiles/caps/enterable/no_items/bottom_vertical_pipe_cap_R.asm
+04C8-04CB:0130		SSP_Tiles/pass_if_in_pipe.asm
+04D8:0130		SSP_Tiles/caps/enterable/no_items/left_horizontal_pipe_cap_B.asm
+04D9:0130		SSP_Tiles/caps/enterable/no_items/right_horizontal_pipe_cap_B.asm
+04DA:0130		SSP_Tiles/caps/enterable/no_items/left_horizontal_pipe_cap_B.asm
+04DB:0130		SSP_Tiles/caps/enterable/no_items/right_horizontal_pipe_cap_B.asm
+;;;Enter horizontal caps in midair
+04A4-04A7:0130		SSP_Tiles/pass_if_in_pipe.asm
+0494:0130		SSP_Tiles/caps/enterable/enter_horiz_midair/left_horizontal_pipe_cap_small.asm
+0495:0130		SSP_Tiles/caps/enterable/enter_horiz_midair/right_horizontal_pipe_cap_small.asm
+0496:0130		SSP_Tiles/caps/enterable/enter_horiz_midair/left_horizontal_pipe_cap_small.asm
+0497:0130		SSP_Tiles/caps/enterable/enter_horiz_midair/right_horizontal_pipe_cap_small.asm
+04B4:0130		SSP_Tiles/caps/enterable/enter_horiz_midair/left_horizontal_pipe_cap_B.asm
+04B5:0130		SSP_Tiles/caps/enterable/enter_horiz_midair/right_horizontal_pipe_cap_B.asm
+04B6:0130		SSP_Tiles/caps/enterable/enter_horiz_midair/left_horizontal_pipe_cap_B.asm
+04B7:0130		SSP_Tiles/caps/enterable/enter_horiz_midair/right_horizontal_pipe_cap_B.asm
+;;Prep turn setters
+;;;Small pipes
+0446:0130		SSP_Tiles/turn_special_prep_up.asm
+0447:0130		SSP_Tiles/turn_special_prep_down.asm
+0456:0130		SSP_Tiles/turn_special_prep_left.asm
+0457:0130		SSP_Tiles/turn_special_prep_right.asm
+;;;;Background small pipes
+048C:0025		SSP_Tiles/turn_special_prep_up.asm
+048D:0025		SSP_Tiles/turn_special_prep_down.asm
+049C:0025		SSP_Tiles/turn_special_prep_left.asm
+049D:0025		SSP_Tiles/turn_special_prep_right.asm
+
+;;;Green pipe
+0428-0429:0130		SSP_Tiles/turn_special_prep_up.asm
+042A-042B:0130		SSP_Tiles/turn_special_prep_down.asm
+0438-0439:0130		SSP_Tiles/turn_special_prep_left.asm
+043A-043B:0130		SSP_Tiles/turn_special_prep_right.asm
+R0448-0458:0130		SSP_Tiles/turn_special_prep_up.asm
+R0449-0459:0130		SSP_Tiles/turn_special_prep_down.asm
+R044A-045A:0130		SSP_Tiles/turn_special_prep_left.asm
+R044B-045B:0130		SSP_Tiles/turn_special_prep_right.asm
+;;;;Background green pipe
+0468-0469:0025		SSP_Tiles/turn_special_prep_up.asm
+046A-046B:0025		SSP_Tiles/turn_special_prep_down.asm
+0478-0479:0025		SSP_Tiles/turn_special_prep_left.asm
+047A-047B:0025		SSP_Tiles/turn_special_prep_right.asm
+R0488-0498:0025		SSP_Tiles/turn_special_prep_up.asm
+R0489-0499:0025		SSP_Tiles/turn_special_prep_down.asm
+R048A-049A:0025		SSP_Tiles/turn_special_prep_left.asm
+R048B-049B:0025		SSP_Tiles/turn_special_prep_right.asm
+;;;Blue pipe
+040C-040D:0130		SSP_Tiles/turn_special_prep_up.asm
+040E-040F:0130		SSP_Tiles/turn_special_prep_down.asm
+041C-041D:0130		SSP_Tiles/turn_special_prep_left.asm
+041E-041F:0130		SSP_Tiles/turn_special_prep_right.asm
+R042C-043C:0130		SSP_Tiles/turn_special_prep_up.asm
+R042D-043D:0130		SSP_Tiles/turn_special_prep_down.asm
+R042E-043E:0130		SSP_Tiles/turn_special_prep_left.asm
+R042F-043F:0130		SSP_Tiles/turn_special_prep_right.asm
+;;;;Background blue pipe
+044C-044D:0025		SSP_Tiles/turn_special_prep_up.asm
+044E-044F:0025		SSP_Tiles/turn_special_prep_down.asm
+045C-045D:0025		SSP_Tiles/turn_special_prep_left.asm
+045E-045F:0025		SSP_Tiles/turn_special_prep_right.asm
+R046C-047C:0025		SSP_Tiles/turn_special_prep_up.asm
+R046D-047D:0025		SSP_Tiles/turn_special_prep_down.asm
+R046E-047E:0025		SSP_Tiles/turn_special_prep_left.asm
+R046F-047F:0025		SSP_Tiles/turn_special_prep_right.asm
+
+;;DragPlayer mode
+R04C0-04D3:0130		SSP_Tiles/DragPlayer.asm

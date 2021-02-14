@@ -1,0 +1,215 @@
+#amk 2
+
+#path "Boomer Kuwanger"
+
+#spc
+{
+	#title "Boomer Kuwanger"
+	#game "Mega Man X"
+	#author "Yuko Takehara"
+	#comment "ported by maxodex"
+}
+
+#samples
+{
+	#optimized
+	"sawtooth.brr"
+	"kick.brr"
+	"snare.brr"
+	"hat.brr"
+	"crash.brr"
+	"toms.brr"
+	"bass.brr"
+	"synth brass.brr"
+	"orchestra hit.brr"
+	"strings.brr"
+	"synth strings.brr"	
+}
+
+#instruments
+{
+	"sawtooth.brr" $FF $E0 $B8 $08 $10			;@30
+	"kick.brr" $FF $E0 $00 $07 $3D				;@31
+	"snare.brr" $FF $E0 $00 $06 $6F 			;@32
+	"hat.brr" $FF $F3 $B8 $09 $80				;@33
+	"crash.brr" $FF $F1 $00 $04 $A3				;@34
+	"toms.brr" $FF $E0 $00 $05 $1F				;@35
+	"bass.brr" $FF $ED $B8 $05 $00				;@36
+	"synth brass.brr" $FF $E0 $B8 $08 $00		;@37
+	"orchestra hit.brr" $FF $E0 $00 $03 $DA		;@38
+	"strings.brr" $FF $E0 $B8 $03 $00			;@39
+	"synth strings.brr" $FF $E0 $B8 $04 $80		;@40
+	"sawtooth.brr" $FF $E0 $B8 $04 $00			;@41
+}
+
+(!100)[$FA $01 $BF]
+(!101)[$FA $01 $B4]
+(!102)[$FA $01 $BC]
+(!103)[$FA $01 $B8]
+(!104)[$FA $01 $BE]
+(!500)[@30]
+(!501)[@39]
+(!502)[@40]
+(!503)[@37]
+(!504)[@36]
+(!505)[@33]
+(!506)[@41]
+
+"Sawtooth=(!100,2,40) (!500,-1) p5,35"
+"Strings=(!101,3) (!501,-1) y5 v100 p15,130"
+"SynthSt=(!101,3) (!502,-1) p12,40"
+"SynthBr=(!102,3) (!503,-1) p12,50"
+"SynthBr2=(!103,3) (!503,-1) $DE $38 $0D $5C"
+"Bass=(!102,3) (!504,-1)"
+
+"Kick=@31 $F4 $03 v150"
+"Snare=@32 $F4 $03 v120"
+"Crash=@34 y20 v150 (!100,0)"
+"CHat=$F4 $03 y0 v80"
+"OHat=$F4 $03 y0 v115"
+"Toms=$F4 $03 (!100,0) @35 v115"
+
+$EF $FF $9D $63  ;$CC $34
+$F1 $03 $44 $01
+$F5 $34 $33 $00 $D9 $E5 $01 $FC $EB
+$F4 $02
+
+t61 w225
+
+#0 [r2]4 (!100,2,40) (!506,-1) $F4 $03 o1 v145 y8
+
+e8r4e8r2 e8r4e8 l16
+>d64e32.<b>d<abgag $F4 $03 /
+(70)[@38 q7f (!100,0) y8 v145 o4 {e4 q72 e4 y5 e4} q7f y8 r8
+e=32 q72 e=16 q7f {d4 q72 d4 y5 d4} q7f r2^8 y8
+{e4 q72 e4 y5 e4} q7f y8 r8 e=32 q72 e=16 q7f
+g=32 q72 g=16 q7f f+=32 q72 f+=16] q7f {d4 q72 d4 y5 d4} r8
+(70) q7f {a4 q72 a4 y5 a4} r2 q6f
+SynthBr2 y9 v135 o3 a+64 b=141 a8r8 g8r8 f+8r8
+f+8..r32 g16.r32 e1^8 r4 f+8g8a8
+b4^16.r32 g8..r32 g8a8b8
+> c+4^16.r32 d4^16.r32 e8..r32 < a2. r8 b1 r8 > p12,20
+e4^16.r32 c4^16.r32 < a8.r16 >
+d4^16.r32 $DE $38 $0D $5C <b2^16 r16> p12,20
+d+4^16.r32 d+8..r32 c-8c+8d+8
+e4f+8g4f+8g8e8
+a4^16.r32 a4 p13,100 ^4. r8 p12,20 a8.r16 e8.r16 e8
+a8.r16 g4 p13,93 ^4. $DE $38 $0D $5C f+8g8a8 > c8^32r32c8^32r32c8 < b8.r16^2
+q5f p12,30
+g4f+4g8a4a8g8f+4f+8g4f+4.d2 p13,100 ^2^16. r32 p12,30
+d8e8f+4f+8g4e4e8g4f+4.d4e8f+4 r4
+g4f+4g8a4a8g8f+4f+8g4b2b8a4
+f+4.f+4e4d4 f+8g4e4e8g4f+4.d4e8
+f+4f+4. q7f e2 p13,100 ^2 r8 $DF <b8b8b16b8r8
+
+
+#6 Sawtooth y6 v70 r=4 $EE $20
+
+(10)[o5 l16 ee<b>de<br>dre<b>dee<b>d]3
+(19)[ee<b>de<br>dre<b>dee<b>] d=8 /
+Sawtooth r=4 y6 v60 o5
+(10)15 ee<b>de<br>d=8r2 $EE $00
+SynthSt v110 y12 o3
+e4r8e2^32r16. d4r8d2^32r16.
+f+4r8f+2^32r16. < b4r8b2^32r16. >
+[e4r8e2^32r16.]2 f+4r8f+2^32r16.
+< b8r16b8r16b8b8.r4^16
+(!100,0)
+Sawtooth r=4 y6 v60 o5
+(10)13 ee<b>de<br>d=8r2
+
+
+#2 Sawtooth v60 y14 r32
+
+(10)3 (19) d32 / o4 SynthBr v130 y11
+e8r2e8r8d8r1
+e8r2e8r8g8r8f+8r8d8r2
+e8r2e8r8d8r1
+e8r2e8r8g8r8f+8r8a8r2
+[r2]16
+SynthSt v110 y13 o3
+c4r8c2^32r16. f+4r8f+2^32r16.
+d+4r8d+2^32r16. g4r8g2^32r16.
+[c4r8c2^32r16.]2 d+4r8d+2^32r16.
+d+8r16d+8r16d+8d+8.r4^16
+(!100,0)
+Sawtooth v78 y14
+(10)13 o5 ee<b>de<br>d
+r2
+
+
+#3 Sawtooth v80
+
+(10)4 / Sawtooth
+v75 y14 (10)15 o5 ee<b>de<br>d y8 v145 o3
+(!100,0)
+@38 b8 b8 b16 b4..
+Strings o4 r4^16
+a>cea8r2^8.<
+a>df+a8r2^8.<
+b>d+f+a8r2^8.<
+b>ef+g8r2^8.<
+ab>ce<a>ceacea>c<ea>c
+e<a>ceaec<a>d+c+d+<f+bd+f+<b
+>d+<f+bd+f+gaf+
+(!100,0) @38 y8 v145 o3
+b+8.b+8.b+8 {b4 q72 b4 y5 b4} q7f
+SynthBr2 q5f v115 y11 o3 r4 p12,30
+b4a4b8>c4c8<b8a4a8b4a4.f+2 p13,100 ^2^16. r32 p12,30
+f+8g8a4a8b4g4g8b4a4.f+4g8a4 r4
+b4a4b8>c4c8<b8a4a8b4>d2d8c4<
+a4.a4g4f+4 a8b4g4g8b4a4.f+4g8
+a4a4. q7f g2 p13,100 ^2 $DF r8
+(!100,0) y8 v145 o3
+@38 b8 b8 b16 b4..
+
+
+#4 Bass [r2]4 o2 v131 $F4 $03 h-2
+
+e16.r4^32e16.r2^32 e16.r4^32e8 l16
+>d=2 q7f ^=1e32.<b>d<abgag /
+[e8e8e8e16e16r16e8e16e8e16e16
+f+8f+8f+8f+16f+16r16f+8f+16f+8f+16f+16
+g8g8g8g16g16r16g8g16g8g16g16
+a8a8a8a16a16b16b8b16b16b16b8]2
+(40)[e8e8e8e16e16r16e8e16e8e16e16]
+f+8f+8f+8f+16f+16r16f+8f+16f+8f+16f+16
+(40)2 g8g8g8g16g16r16g8g16g8g16g16
+(41)[a8a8a8a16a16r16a8a16a8a16a16]
+(42)[b8b8b8b16b16r16b8b16b8b16b16]2
+(41) >d8d8d8d16d16r16d8d16d8d16c16<
+b8b8b8b16b16r16b8b16>d+8d+16d+16
+(43)[e8e8e8e16e16r16e8e16e8e16e16]
+(41)2(42) < b8.b8.b8b8r4.
+> $E6 $00 (43)2 (44)[d8d8d8d16d16r16d8d16d8d16d16]2
+c8c8c8c16c16r16c8c16c8c16c16 (44) $E6 $01
+(43) e8e8e8e16e16<b8b8b16b8.
+
+
+#5 [r2]7 r16 $F4 $03 Snare o4 c16c8c8c16c16 /
+
+(53)[Crash c4 CHat (!505,-1) (!104,3)]
+(50)[ [[c32r32]]22 OHat c32. $ED $7F $F8 ^16^64 CHat c32r32 OHat c16 $ED $7F $F8 ^8
+CHat [[c32r32]]24] (51)[Toms r16 y6 a16a8e16e16 y15 <a16a16>] (53) (50) (51)
+(53) (50) (52)[(!100,0) r16 Snare y11 o4 c16c8c8c16c16]
+(54)[(!505,-1) (!104,3) CHat [[c32r32]]4 ] (50) $F4 $03 Crash c8c8c4
+(54) (50) (52) (54)
+[[c32r32]]22 OHat c32. $ED $7F $F8 ^16^64 CHat c32r32 OHat c16 $ED $7F $F8 ^8 CHat [[c32r32]]16
+$F4 $03 Crash c8.c8.c8c2
+c4 (!505,-1) (!104,3) CHat (55)[c32r32]26 (56)[OHat c16 $ED $7F $F8 ^16]
+CHat (55)56 r16 Toms y6 a16a16a16 y13 e16e16< y15 a16a16>
+Crash c4 (!505,-1) (!104,3) CHat (55)26 (56) CHat (55)32
+$F4 $03 Crash c4 (!505,-1) (!104,3) CHat (55)26 (56) CHat (55)24
+r16 (!100,0) Snare y11 [c16]7
+
+
+#1 [r2]4 Kick [c4]8 $F4 $03 /
+
+$E6 $00 (60)[Kick c4 Snare c4]7 (61)[Kick c4 c4 $F4 $03] $E6 $02
+(60)7 Kick c8c8c4 $F4 $03
+(60)7 (61) (60)6 Kick c8.c8.c8 c16 Snare [c16]7
+(62)[Kick c4 Snare c8 Kick c4 c8 Snare c4
+Kick c8c8 Snare c8 Kick c8] ^8 c8 Snare c4
+(62) ^8 c8 Snare c8c16c16 (62) c2 $F4 $03
+(62) ^8 c8 Snare c4 (62) ^8 c8 Snare c8c16c16
+(62) ^8 c8 Snare c4 (62) c4 $F4 $03 ^4

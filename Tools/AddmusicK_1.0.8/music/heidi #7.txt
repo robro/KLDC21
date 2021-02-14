@@ -1,0 +1,348 @@
+#amk 2
+
+#SPC
+{
+#title "Heidi #7"
+#game "Lyle in Cube Sector"
+#author "Smirk"
+#comment "sonic generations"
+}
+
+#samples
+{
+#default
+}
+
+;You can customize this port's lead and bassline to your liking.
+;Note that not all combinations are necessarily guaranteed to sound great, but I figured I'd leave the choice to you
+;Here's a list of possible parameters and some random adjectives that came to mind when I thought of trying to describe them.
+
+;*******************************
+; LEAD
+
+#define lead 6
+
+;VALID VALUES:
+;[ -1 ] "Super Nostalgic"  ~ Inspired by worldpeace's port.
+;[  0 ] "Dreamy Nostalgic" ~ Similar to worldpeace's port, but less staccato.
+;[  3 ] "Dreamy/Solemn"    ~ A somewhat experimental, starry-sounding lead. This also slows the tempo down.
+;[  6 ] "Modern" (DEFAULT) ~ My original choice of lead for this port, and one that sounds somewhat fuller.
+;*******************************
+
+
+;*******************************
+; BASSLINE
+
+#define bass 1
+
+;[  1 ] "Harsh" (DEFAULT) ~ A very loud and rough, FM-y bass.
+;[  2 ] "Soft"            ~ A more reserved, square wave-y bass, with only hints of FM.
+
+;*******************************
+
+;-1 - super nostalgic, 0 - dreamy nostalgia, 3 - dreamy/solemn, or 6 - modern (default 6)
+;1 - harsh or 2 - soft (default 1)
+
+#instruments
+{
+#if bass == 1
+@1 $ED $E0 $00 $03 $00	;@30
+@6 $ED $F3 $00 $03 $00	;@31
+#endif
+#if bass == 2
+@0 $ED $E0 $00 $03 $00	;@30
+@1 $ED $F3 $00 $03 $00	;@31
+#endif
+
+#if lead == 6
+@6 $AD $75 $00 $06 $00	;@32 @6 $AD $73 $00 $06 $00
+#endif
+
+#if lead == 0
+@0 $AD $B1 $00 $06 $00	;@32
+#endif
+
+#if lead == -1
+@0 $AD $B5 $00 $06 $00	;@32
+#endif
+
+#if lead == 3
+@3 $EB $F2 $00 $0C $00	;@32
+#endif
+
+@21 $ED $E0 $00 $04 $00	;@33
+@10 $CE $89 $00 $05 $00	;@34
+@13 $EE $52 $00 $06 $00	;@35
+}
+
+
+$EF $F7 $CD $32
+$F1 $05 $E0 $01
+
+"M=@33 q7f"
+"S=@34 q7c"
+
+"ON=$EC $00 $03 $FA"
+"OFF=$EC $00 $00 $00"
+
+#0 $f4 $02 / $FA $02 $00 w170  @30 v175 $FA $00 $02 y7 l16 o2
+(0)[
+[[ee>e<e e>e<ee]]2
+gg>g<g g>g<gg
+aa>a<a g>g<f+>f+<	;31
+[[cc>c<c c>c<cc]]2	;48
+dd>d<d d>d<dd
+gg>g<g f+f+>f+<f+	;63
+]2
+
+(1)[
+[[gg>g<g g>g<gg]]2
+a+a+>a+<a+ a+>a+<a+a+
+cc>c<c< a+>a+<a>a	;31
+[[d+d+>d+<d+ d+>d+<d+d+]]2
+ff>f<f f>f<ff
+a+a+>a+<a+ aa>a<a
+]2
+
+$FA $02 $FE (0)2 $FA $02 $00
+
+(2)[dd8 dd8 d8. d>d8< d>d8<d	;15
+ff8 ff8 f8. g>g8<ff8e	;31
+a+a+8 a+a+8 a+a+8 a+>a+8< a+>a+8<a+	;47
+>cc8 cc8 cc8] ff8 e8c8	;63
+(2) r4..
+
+(3)[ o2
+ee>e<e
+e>e<ee
+bb>b<b
+aa>a<a
+gg>g<g
+g>g<gg
+f+f+>f+<f+
+f+>f+<f+>f+<
+ee>e<e
+e>e<e>e<
+bb>b<b
+>ddc+<a
+[[gg>g<g]]2
+f+f+>f+<f+
+d>d<e>e
+]2
+
+$FA $02 $03
+(3)2
+
+;[[r2]]255
+
+
+
+
+#1 v120 @31 y13 o3 $FA $02 $00
+
+(0)2
+(1)2
+
+$FA $02 $FE (0)2 $FA $02 $00
+
+(2) ff8 e8c8
+(2) r4..
+
+(3)2
+$FA $02 $03
+(3)2
+
+;[[r2]]255
+
+
+
+
+#2
+#if lead == 3
+v200 t48
+#endif
+#if lead == 6
+v160 t51
+#endif
+#if lead == 0
+v200 t51
+#endif
+#if lead == -1
+v200 t51
+#endif
+
+@32 o3 l16
+[[(20)[e8.be8f+g8.	;9
+g8f+gd8e4e8.b8.	;25
+b8a8b8g8e8g8.	;38
+f+8.f+8g8f+8d8.d8.	;53
+e8f+8g8]f+8d8]]2	;63
+
+l8
+[[ (21)[ga+ag
+fdfd
+fga+a
+gfdf
+a+agf
+dfdf	;47
+gfgf
+d<a+]g4]]2	;64
+
+
+$FA $02 $FE o3 l16
+[[
+(20)f+8d8]]2
+
+$FA $02 $00
+[r2]16 l8
+o3
+(27)[eegb
+b>de<b8.>d<ab16>edc+<ab	;32
+agf+16g8.
+agb>de<b>d<a]bgae
+
+(27) l16 ggf+g bb>de
+
+[[ (29)[<g4r8g8a8 ON a+8a8g8r8	OFF ;18
+g8r8g8 ON a8a+8a8r8	OFF ;32
+
+g8r4g8 ON a8a+8a8 OFF >d8r8d8r8d8 ON c8<a+8 OFF] a8r8]]2
+
+;[[r2]]255
+
+
+#5
+#if lead == 3
+v120
+#endif
+#if lead == 6
+v80
+#endif
+#if lead == 0
+v100
+#endif
+#if lead == -1
+v100
+#endif
+@32 y8 o3 l16
+[[
+r16 d8 (20) f+16
+]]2
+
+[[r8.(21)o2g16]]2
+
+$FA $02 $FE
+[[ o3
+r16 d8 (20) f+16
+]]2
+
+$FA $02 $00
+[r2]16
+
+
+o3 l8
+r16 e (27) bga
+e (27) l16 ggf+g b
+
+[[ r8. (29) a16 ]]2
+
+;[[r2]]255
+
+
+#3 v255 o3 $FA $02 $00
+[[(300)[Ma8a8Sa8.	;6
+Ma8.a8S]a4	;15
+(300)a8Ma8 ]]4
+
+$FA $02 $03
+[[(300)a4	;15
+(300)a8Ma8]]4
+
+$FA $02 $FE
+[[(300)a4	;15
+(300)a8Ma8]]5
+
+(300)a4
+Ma8a8Sa8. Mq7aaq7fa8a8Sa8q7aMaSaq7f	;63
+
+(300)a4	;15
+(300)a8Ma8
+(300)a4
+aMa8a8Sa8. Ma S q72a q74a q76a q78a q7aa q7ca q7fa
+
+$FA $02 $00
+
+[[(306)[Ma8a8 Sa8q77a Mq7aaq7f	;8
+Ma8a8 Sa8Mq77a Sq7aaq7f	;16
+Ma8a8 Sa8](307)[Ma8	;24
+Ma8 q7aaq7ca Sq7fa8 q7cMa q7fSa]	;32
+(306) (308)[Mq7aa q7fa Saq7ca Ma8 q7fa8 Sq7caq7fa] ]]2
+
+$FA $02 $03
+[[(306)(307)(306)(308)]]2
+
+;[[r2]]255
+
+
+
+#4
+#if lead == 3
+v200
+#endif
+#if lead == 6
+v240
+#endif
+#if lead == 0
+v190
+#endif
+#if lead == -1
+v200
+#endif
+@35 l8 o5
+[r2]32
+r(40)[cc<aa gge4	;17
+ffefecd4	;33
+>cc<aa ga>](41)[c4	;49
+ddc<a>c<]ad	;63
+
+r(40)(42)[>c8fec<a>c<a>c]d	;63
+
+[[(43)[<<a+afe
+cdefcdef	;24
+a+afe
+fedc
+degf
+agfe
+gec]d]]2	;64
+
+[[r2]]255
+
+#6
+[r2]32
+
+#if lead == 3
+v80
+#endif
+#if lead == 6
+v120	;v90
+#endif
+#if lead == 0
+v90
+#endif
+#if lead == -1
+v80
+#endif
+
+@35 l8 o4 y7
+r16d4(40)a16
+(41)
+
+r16d4(40)(42)o5d
+
+(43) o3d
+(43) o3c
+
+[[r2]]255
+
+
+

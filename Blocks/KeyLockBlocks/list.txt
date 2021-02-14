@@ -1,0 +1,20 @@
+400:0130	16x32_V_Keyblk_T.asm
+410:0130	16x32_V_Keyblk_B.asm
+
+401:0130	16x48_V_Keyblk_T.asm
+411:0130	16x48_V_Keyblk_M.asm
+421:0130	16x48_V_Keyblk_B.asm
+
+402:0130	32x16_H_Keyblk_L.asm
+403:0130	32x16_H_Keyblk_R.asm
+
+404:0130	48x16_H_Keyblk_L.asm
+405:0130	48x16_H_Keyblk_M.asm
+406:0130	48x16_H_Keyblk_R.asm
+
+407:0130	32x32_SQ_Keyblk_UL.asm
+408:0130	32x32_SQ_Keyblk_UR.asm
+417:0130	32x32_SQ_Keyblk_DL.asm
+418:0130	32x32_SQ_Keyblk_DR.asm
+
+409:0130	collectable_key.asm

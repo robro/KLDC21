@@ -1,0 +1,181 @@
+#amk 2
+#spc
+{
+	#author	 "Plasmariel"
+	#game	 "N/A"
+	#title	 "Neo Beat"
+        #comment "Ported by brickblock369"
+}
+
+#path "Neo Beat"
+#samples
+{
+#optimized
+"Bass.brr"
+"HighPad.brr"
+"HiHat.brr"
+"Kick.brr"
+"MellowPiano.brr"
+"Pad.brr"
+"Piano.brr"
+"Snare.brr"
+}
+
+#instruments
+{
+"Bass.brr" $8F $E0 $00 $05 $58 ;30
+"HighPad.brr" $8F $EC $00 $04 $00 ;31
+"HiHat.brr" $8F $E0 $00 $05 $A8 ;32
+"Kick.brr" $8F $E0 $00 $05 $60 ;33
+"MellowPiano.brr" $8F $F1 $00 $03 $C2 ;34
+"Pad.brr" $8F $E0 $00 $01 $54 ;35
+"Piano.brr" $8F $F0 $00 $01 $54 ;36
+"Snare.brr" $8F $E0 $00 $03 $C0 ;37
+"HighPad.brr" $8F $EC $00 $04 $02 ;38 detuned slightly
+"HighPad.brr" $8F $EC $00 $04 $04 ;39 detuned slightly more
+"MellowPiano.brr" $8F $F1 $00 $03 $C3 ;40 detuned slightly
+}
+$EF$FF$10$F0
+$F1$04$E0$01
+
+w255
+t50
+$f4$02
+#0
+ v210
+(0)[@30 o2 f8 > f8 < f16 g+8 a+8. < a+8 b+16 b-16 > c16 d+16
+f8 > f8 < f16 g+8 a+8 a+16 g+16 a+16 a+8$DD$00$0Cb+ g+8
+f8 > f8 < f16 g+8 a+8. < a+8 > a+16 b16 a+16 g+16
+f8 > f8 < f16 g+8 a+8 a+16 g+16 a+16 a+8$DD$00$0Cb+ ] g+8
+/
+(1)[f4 f8. f8. d+8 f8 g8$DD$00$0Cg+
+f4 f8. f8. f8 g+8 a8
+a+4 a+8. a+8. b+8 f8 d+8
+f4 f8. f8. d+8 < a+8 > c8]2
+v113 @31 (2)[ o5 
+f1^8 f16 f16 f16 f8 f8. e8 f16 g8 g+16^1.] b+8. a+8. b+8
+y13 (3)[f1^8 f16 f16 f16 f8 f8. e8 f16 g8 g+16^1^2.]
+@32
+v100 f16 y8 v130 f16 y12 v160 f16 y8 v190 f16
+< y10
+[ [[v230 f8 f16 v160 f16]]3
+v230 f16 v160 f16 v230 f16 v160 f16
+[[v230 f8 f16 v160 f16]]2
+v230 f16 v160 f16 v230 f8
+f16 v160 f16 v230 f16 v160 f16]6
+v210 (0) o2 g+8
+
+#1 $f4$03
+(10)[v230 o4 @33 c4]16
+/
+(10)32
+@35 $f4$03
+$f4$01
+o2 y12
+v240
+a+1 g2 b+2 f1^2 a+2
+a+1 g2 b+2 f1^2 a+4$f4$01^4
+o4 y10
+[@33 $f4$03 v230 c4 @37 $f4$03 c8. $f4$03 @33 c8. c8 $f4$03 @37 c4]12
+$f4$03 (10)16
+
+#2
+y12 r16 v70 (0) o2 g+16
+/
+@35 y13 o4 v160 $f4$01 g1^1 g+1 g2.$DC$30$07^4
+$DE$00$0D$40 g1^1 g+1 g1 $DF 
+f1. e2 d+1^2 d2 f1. e2 d+1^2 d4$f4$01^4
+[[@36
+v240 y7
+o2 c+8 o5 v205 c8 o1 v240 g+16 o5 v205 c8 o2 v240 c+16
+o5 v205 c8 o2 v240 c+16 o5 v205 c16 o1 v240 g+8 o5 c8
+(20)[o1 g8 o5 v205 c8 o2 v240 g16 o5 v205 c8 o2 v240 c16
+o5 v205 c8 o2 v240 c16 o5 v205 c8 v240] o2 c16 o5 c8
+o2 f8 o5 v205 c8 o2 v240 c16 o5 v205 c8 o2 v240 f16
+o5 v205 c8 o2 v240 f16 o5 v205 c16 o2 v240 c8 c-8
+o1 a+8 o5 v205 c+8 o1 v240 a+16 o5 v205 c+8 o2 v240 d+16
+o5 v205 c+8 o2 v240 d+16 o5 v205 c+8 v240 o2 d+16 o5 d+8
+o1 g+8 o5 v205 d+8 o1 v240 g+16 o5 v205 d+8 o2 v240 c+16
+o5 v205 c8 o2 v240 c+16 o5 v205 c8 o2 v240 c+16 o5 v205 c8
+(20) o2 c+16 o5 c8]]2
+y7 @35 o4 v160 g1^1^1^1
+
+#3
+y8 r8 v95 (0)
+/
+@35 y7 o4 v160 $f4$01 d+1 d1 f1 d+2.$DC$30$0D^4
+$DE$00$0D$40 d+1 d1 f1 d1 $DF 
+c+1 d2. c+4 c1^1 c+1 d2. c+4 c1$f4$01^1
+[[@36
+v240 y13
+o3 c+8 o4 v205 g+8 o2 v240 g+16 o4 v205 g+8 o3 v240 c+16
+o4 v205 g+8 o3 v240 c+16 o4 v205 g+16 o2 v240 g+8 o4 g+8
+(30)[o2 g8 o4 v205 a+8 o3 v240 g16 o4 v205 a+8 o3 v240 c16
+o4 v205 a+8 o3 v240 c16 o4 v205 a+8 v240] o3 c16 o4 a+8
+o3 f8 o4 v205 g+8 o3 v240 c16 o4 v205 g+8 o3 v240 f16
+o4 v205 g+8 o3 v240 f16 o4 v205 g+16 o3 v240 c8 c-8
+o2 a+8 o4 v205 g+8 o2 v240 a+16 o4 v205 g+8 o3 v240 d+16
+o4 v205 g+8 o3 v240 d+16 o4 v205 g+8 v240 o3 d+16 o4 a+8
+o2 g+8 o5 v205 c8 o2 v240 g+16 o5 v205 c8 o3 v240 c+16
+o4 v205 g+8 o3 v240 c+16 o4 v205 g+8 o3 v240 c+16 o4 v205 g+8
+(30) o3 c+16 o4 g+8]]2
+y13 @35 o4 v160 d+1^1^1^1
+
+#4
+r1^1^1^1
+/
+@35 y12 o4 v160 $f4$01 c1^1 c+1 c2.$DC$30$08^4
+$DE$00$0D$40 c1^1 c+1 c1 $DF  <
+g+1 a+1 g+1^1^1 a+1 g+1$f4$01^1
+
+@34 o4 y12 v200
+f1^8 (40)[f16 f16 f16 f8 f8. e8 f16 g8 g+16^1^8
+g+16 g+16 g+16 g+8 g+8. g8 g+16 a+8 > c16^4 <
+g8. f16^4. g16 g+16 a+4 g4 f8. e8.] f1^4
+* f8
+@35 y12 v160 c1^1^1^1
+
+#5
+r1^1^1^1
+/
+@35 y8 o3 v160 $f4$01 g+1^1 b+1 a+2.$DC$30$0C^4
+$DE$00$0D$40 g+1^1 b+1 g+1 $DF
+a+1 g1^1^1 a+1 g1^1$f4$01^1
+@36 > y8 v200
+r8 [c+8. c+8. c+8. c+8. c+4
+f8. f8. e8. e8. e4
+d+8. d+8. d+8. d+8. d+4
+c+8. c+8. c+8. c+8. d+4
+g8. g8. c+8. c+8. c+4
+f8. f8. e8. e8.] c+4
+* d+8
+
+@35 y8 v160 o3 g+1^1^1^1
+
+#6
+r1^1^1^1
+/
+r16 v70 @30 y12 (1)2
+@38 (2) o5 b+8. a+8. b+16
+y10 $f4$03 (10)14
+o4 c8 c8 c16 c16 c16 c16 $f4$03
+@36 y12 v200
+r8 [f8. f8. f8. f8. f4
+g8. g8. g8. g8. g4
+g8. g8. g8. g8. g+4
+f8. f8. f8. f8. g4
+g+8. g+8. f8. f8. f4
+g8. g8. g8. g8.] g4
+* g8.
+y12 v70 (0) o2 g+16
+
+#7
+r1^1^1^1
+/
+r8 v95 @30 y8 (1)2
+@39 (2) o5 b+8. a+8. b+16
+(3) 
+@40 o4 y8 v140 r4
+f1^8 (40) f1^4
+(40) f8.
+y8 v95 (0)

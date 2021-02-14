@@ -1,0 +1,183 @@
+#amk 2
+#spc
+{
+	#author	 "Plasmariel"
+	#game	 "N/A"
+	#title	 "Funky, Tech, Go!"
+        #comment "Ported by brickblock369"
+}
+
+#path "FunkyTech"
+
+#samples
+{
+"../optimized/00 SMW @0.brr"
+"../optimized/01 SMW @1.brr"
+"../optimized/02 SMW @2.brr"
+"../optimized/03 SMW @3.brr"
+"../optimized/04 SMW @4.brr"
+"../optimized/05 SMW @8.brr"
+"../optimized/06 SMW @22.brr"
+"../optimized/07 SMW @5.brr"
+"../optimized/08 SMW @6.brr"
+"../EMPTY.brr"
+"../optimized/0A SMW @9.brr"
+"../optimized/0B SMW @10.brr"
+"../optimized/0C SMW @13.brr"
+"../EMPTY.brr"
+"../optimized/0E SMW @29.brr"
+"../optimized/0F SMW @21.brr"
+"../optimized/10 SMW @12.brr"
+"../EMPTY.brr"
+"../optimized/12 SMW @15.brr"
+"../EMPTY.brr"
+"Bass.brr"
+"BassDrum.brr"
+"Flute.brr"
+"Guitar.brr"
+"Hi-Hat Open.brr"
+"Hi-Hat.brr"
+"Organ.brr"
+"Snare.brr"
+}
+
+#instruments
+{
+"Bass.brr" $CF $6A$00$08$00 ;30
+"BassDrum.brr" $8F$E0$00$0F$00 ;31
+"Flute.brr" $8F$E6$00$10$00 ;32
+"Guitar.brr" $8F$C2$00$08$00 ;33
+"Hi-Hat Open.brr" $8F$f1$00$1E$00 ;34 It was a ride cymbal lmaooo... how could I miss that
+"Hi-Hat.brr" $8F$E0$00$1E$00 ;35
+"Organ.brr" $BF $A0$00$04$00 ;36
+"Snare.brr" $8F$E0$00$0F$00 ;37
+}
+
+$EF$FF$20$E0
+$F1$01$E0$01
+
+w255
+t54
+$f4$02
+#0
+ r1
+/ $fa$03$30 v230 o3
+@30 
+[[ [c+8. > c+8. < g+8 c+8 g+8 b8 > c8
+c+8. c+8. < c+8 g+8. < g+8. g8
+f+8. > f+8. c+8 < f+8 f+8 a8 a+8
+b8. b8. > f+8 b8.] f+8. c-8]]7
+* f+4^16
+* f+8. c-8
+* f+4^16
+v180
+< @36
+c+1^2$DD$BD$05>c+^2^1^2$DD$BD$05<c+^2^1^2$DD$BD$05>c+^2^1^1
+#1
+ $fa$03$18 
+y9 v170 r1
+/
+o4
+[@36 d+1 f1 e1 f+1]255
+
+#2
+ $fa$03$18 
+y11 v170 r1
+/
+o4
+[@36 c-1 c+1 c+1 d+1]255
+
+#3
+
+r1
+/ $fa$03$18
+(40)[o3 y11 v170 @36 f+1 g+1 g+1 a1]10
+ v160 > (31)[@32 $f4$01 d+8^32 c+32 c32 c-32^8] c-8 $f4$01^8
+v80 * $f4$01
+v120 d+16 r16 g+8^4
+v160 (32)[$f4$01 a+16 a32 g+32 f+8 g+8$f4$01^8]
+v80 *
+v120 e16 r16 c+4.
+v160 e16 r16 d+4.
+v80 e16 r16 d+4.
+v120 < b16 r16 g+4.^1^2
+v170 @36 g+1 a1
+
+#4
+ $fa$03$18 
+r1
+/ 
+(30)[@36 o3 y9 v170 g+1 b1 a1 >c+1]2
+ > 
+@36 $f4$01 l32 y7 v160 d+ <g+ y8 v140 >d+ <g+ y12 v115 >d+ <g+ y12 v85 >d+ <g+ $f4$01 <
+v230 y12  r8 (45)[@32 $DF c+8 f+2$DD$00$10g+ a+4^4$DD$00$06b^4$DD$00$06>c+^4$DD$00$06d+
+^2$DD$00$06e$DE$00$0C$20^2 $DF d+4$DD$20$10d < b4 f+4] b4
+v130 r4 y8 $EE$08 g+8 v190 $EE$00 * b4
+(30)2
+ v230 y8 (60)[@33 l16 b8$DD$18$0F>c+^2$DE$07$0C$30^4^8 e8 c+r< b8 > c+r e8 c+r f+8 c+r
+f+8$DD$00$18g+ $f4$01 f+16 e32$F4$01^32
+f+8 $f4$01 ed+ed+c+32$F4$01^32
+d+8 c+c-c+ <
+f+8$DD$00$0Cg $f4$01 f+ef+ed+32$F4$01^32 $f4$01 e8 d+32$F4$01^32 
+$f4$01 c+c-c+8.c-32$f4$01^32
+$f4$01 e8 c-32$f4$01^32 c+8 $f4$01c-<gf+ec+ef+32$f4$01^32 $f4$01 gf+e32$f4$01^32 > c+
+$F4$01 c-c+32$f4$01^32 $f4$01 < f+32g32 f+ ef+32$f4$01^32 g+ec+c-c+rerg+r
+$f4$01 f+g+ab32$f4$01^32> $f4$01 c+d+ef+32$f4$01^32
+$f4$01 e8 c+32$f4$01^32 d+8 c-c+<g+
+>c-8c+8<$f4$01f+32g32f+ec+32$f4$01^32
+ef+re8.c+8]
+(30)2 $EE$08
+r4 y9 v130 (31) > $DF c-8 $f4$01
+v160 > d+16 r16 g+8^4
+v80 d+16 r16 g+8^4
+v120 (32)
+v160 e16 r16 c+4.
+v80 e16 r16 c+4.
+v120 e16 r16 d+4.<
+v160 b16 r16 g+4.
+v80 b16 r16 g+4.^1^4
+v170 @36 $EE$00 a1 > c+1
+
+
+#5
+o3
+$f4$03
+(50)[l16  v230 @31 c v115 @35 c v225 c v115 c v230 @37 $f4$03 c8$f4$03  @35 v225 c16. $f4$03 @37 v80 c32
+v230 c $f4$03 @31 c v115 y11 @35 c $f4$03 @37 c $f4$03 @31 c8 $f4$03 @37 y10 v230 c v160 c]
+/ 
+[[(51)[v230 $f4$03  @31 c8 @35 v225 c v130 c v230 $f4$03 @37 c8 $f4$03 @35 v225 c v130 c
+v230 @31 c8 @35 v225 c v130 c v230 $f4$03 @37 c8 $f4$03 @31 c8]
+(52)[v230 @31 c8 @35 v225 c v130 c v230 $f4$03 @37 c8 $f4$03 @35 v225 c v130 c
+v230 @31 c8 @35 v225 c @31 v130 c $f4$03 @37 v230 c8 $f4$03 @31 c @35 v130 c $f4$03] ]]3
+
+(51)(50)
+
+[[(51)(52)(51)(52)(51)(52)(51)(50)]]4 $f4$03
+[[v230 @31 c4]]16
+[[v230 @31 c v115 @35 c v225 c v115 c]]13
+v230 @31 c8 v225 @35 c v115 c
+v230 @31 c8. v115 c16 $f4$03 @37 v230 c8 @31 c8
+
+#6
+r8 q74 o3 
+l16 v230 @31 c v115 @35 c v225 c v115 c v230 @37 c8 @35 v225 c16. @37 v80 c32
+v230 c @31 c v115 y0 @35 c @37 c @31 c8
+/ q7f  $fa$03$18
+[[r2]]16 
+(30)2
+[[r2]]16
+(30)2
+ r8 $DF v127 @34 < [[y9 c4 y11 c4]]7 y8 c4 y12 c8
+v107 [[y9 c8 y11 c8]]12 $E8$C0$30 [[y9 c8 y11 c8]]4
+(30)
+@36 o3 y9 v170 g+1 b1[r2]4
+#7r1  $fa$03$18 
+/
+[[r2]]16
+@36 $f4$01 o5 l32 y13 v160 c- <f+ y12 v140 >c- <f+ y8 v115 >c- <f+ y8 v85 >c- <f+ $f4$01
+ < r4. v130 y9 $EE$08 (45) y12 v230 $EE$00 g+1^1^1^1 v190 y8 g+1^1^1^1^1^1^1^1
+r8 y10 v145 $EE$08 (60)
+[[r2]]7 r4. $EE$00 $DF
+@35 l16 y10 < [[v115 g v85 g]]24 $E8$C0$20 [[v115 g v85 g]]8 >
+(40)
+o3 y11 v170 @36 f+1 g+1 [r2]4

@@ -1,0 +1,152 @@
+#amk 2
+#instruments
+{
+    	@10 $FF $5B $00 $03 $00 ; @30 kick
+	@29 $FF $F0 $00 $03 $00 ; @31 snare
+	@22 $00 $00 $62 $07 $00 ; @32 hihat
+	@8 $FF $EB $00 $1E $00 ; @33 bass
+	@1 $FA $E8 $7F $03 $00 ; @34 strings
+	@6 $FF $E9 $B8 $03 $00 ; @35 guitar
+}
+#spc
+{
+    	#title   "Frenzy"
+    	#game    "Trials of Mana"
+    	#author  "Hiroki Kikuta"
+    	#comment "Ported by Infinity"
+}
+
+"KICK = @30 o3 v190 h-6 $FA $03 $FF"
+"SNARE= o3 v220 @31 h0 $FA $03 $00"
+"HAT= o4 @32 q7f"
+
+$EF $3A $47 $B9 
+$F1 $05 $38 $01 
+$F5 $20 $0C $10 $0C $20 $0C $0C $0C
+
+#0 t49 w220 v204
+
+KICK g48g48g48
+SNARE a8a12 KICK g24 SNARE a12a24 KICK g12 SNARE a8 KICK g24g12g48g48 SNARE a12a8 KICK g24
+/(1)[KICK g6^24g24 SNARE a12a24 KICK g12 SNARE a8 KICK g24g8 SNARE a12a8 KICK g24
+KICK g6^24g24 SNARE a12a24 KICK g12 SNARE a8 KICK g24g12g24 SNARE a12a24 KICK g8
+r6r24 KICK g24 SNARE a12a24 KICK g12 SNARE a8 KICK g24g8 SNARE a12a8 KICK g24
+KICK g6^24g24 SNARE a12a24 KICK g12 SNARE a8 KICK g24g12g24 SNARE a12a24 KICK g8]3
+(2)[KICK g6^24g24 SNARE a12a24 KICK g12 SNARE a8 KICK g24g8 SNARE a12a8 KICK g24
+KICK g6^24g24 SNARE a12a24 KICK g12 SNARE a8 KICK g24g12g24 SNARE a12a24 KICK g8
+r6r24 KICK g24 SNARE a12a24 KICK g12 SNARE a8 KICK g24g8 SNARE a12a8 KICK g24]
+KICK g8g12g24 SNARE a12a24 KICK g12 SNARE a8 KICK g24g12g24 SNARE a24a24a24 KICK g24g24g24
+(1)3
+(2)
+KICK g8g12g24 SNARE a12a24 KICK g12 SNARE a8 KICK g24g12g24 SNARE a12a24 KICK g12g24
+[g4]30 g8g8g4
+
+#1 y9 HAT v194
+
+r16
+c12^=8c12^=8c8.r48c8^=8v163c12^=8v194c=16v174c12^=8v141c24
+/[v141c=16v117c=8v141c=16v117c=8v194c=16v117c=8v141c=16v117c=8]79
+v141c=16v117c=8v141c=16v117c=8v194c4
+
+#2 @33 o1 v175 $FA $03 $FF
+
+r1^16 /
+(21)[d8f16r16g16g+16r16a16r16>c8<a16>c16c16d16r16]
+(22)[<d8f16r16g16g+16r16a16r16>c8<a16>c16d16<a16g16]
+[[ (21) (22) ]]2
+(21)
+(23)[d8f16r16g16g+16r16a16r16>c8<a16>c16d16<a16g+16
+g8b16r16>c16c+16r16d16r16f8d16f16f16g16r16
+<g8b16r16>c16c+16r16d16r16f8d16f16g16d16c16
+<g8b16r16>c16c+16r16d16r16f8d16f16f16g16r16
+<g8b16r16>c16c+16r16d16r16f8d16f16g16c16<g16]
+[[ (21) (22) ]]5
+(21)
+(23)
+(21) 
+(22)
+(21)
+d8f16r16g16g+16r16a16r16>c8<a16>c16<a16g16g+16
+[[a2.a16r16e16r16 g2.g16r16g+16r16]]3
+a2.a16r16e16r16
+g2g16g16g+16r16a16r8^16
+
+#3 @34 v165 y8 p17,5 $E5 $01 $0F $30
+
+r1^16
+/[o5c2..<b8
+>c2^8<b8>c8d8
+<b4.a1.
+b8
+>c2..<b8
+>c2^8<b8>c8d8
+<b4.a1.^8
+>d2..c8
+d2^8c8d8e8
+c4.<b1.
+b8] o5c2..<b8
+>c2^8<b8>c8d8
+<b4.a1.
+b8
+*
+>c2..<b8
+>c2^8<b8>c8d8
+<b4.a1.^8
+(31)[>a8.a16r8a16g16r16a16g16r16a16r16g16e16]
+(32)[a8.a16r8a16g16r16a16g16r16a16r8.]
+[[ (31) (32) ]]2
+(31)
+a8.a16r8a16g16r16a16g16r16a16r8^16
+
+#4 @34 v165 y12 p17,5 $E5 $01 $0F $30
+
+r1^16 /
+[o4f2..e8
+f2^8e8f8g8
+e4.d1.
+e8f2..e8
+f2^8e8f8g8
+e4.d1.^8
+g2..f8
+g2^8f8g8a8
+f4.e1.
+e8] o4f2..e8
+f2^8e8f8g8
+e4.d1.
+e8
+*
+f2..e8
+f2^8e8f8g8
+e4.d1.^8
+(41)[>c+8.c+16r8c+16<b16r16>c+16<b16r16>c+16r16<b16g+16]
+(42)[>c+8.c+16r8c+16<b16r16>c+16<b16r16>c+16r8.]
+[[ (41)(42) ]]2
+(41)
+c+8.c+16r8c+16<b16r16>c+16<b16r16>c+16r8^16
+
+#5 @35 y11 v176 $DE $10 $10 $40 $E5 $01 $0F $30
+
+r1^16 /
+[r1]16
+[o5c24r6c24r2<f12e24r12f24
+>c24r6c24r2.
+c24r6c24r2<f12>d24r12<e24
+>c24r6c24]r2.
+* r4.r3c24
+d2<g24f+24d24c24d24f+24g24b24>c24e24c24<b24
+g2f12g24r12a24r12b24r12f24
+e4.d4.c4
+r4<b12>c24r12d24r12e24r12f24g12e24c12<b24
+a2..g24a24b24
+>c8<b24r12>c8<b12>c24r2
+g8e24r12g8e12g24r2
+>c8.<g8.e4e24f24g24f24e24c24<b24>c+24d24
+(51)[<a2^8>d24r12e24r12g12e24]
+(52)[r12d24e2^3<g24]
+(51)
+r12>d24<b2^3g24
+(51)
+(52)
+(51)
+r12>d24<b4^6>c24d24e24f24g24a16r8^16
+

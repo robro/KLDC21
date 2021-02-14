@@ -1,0 +1,162 @@
+#amk 2
+
+#spc
+{
+	#author "Toshihiko Horiyama"
+	#game	"Megaman & Bass"
+	#comment "Arranged/Ported by Ultima."
+	#title	"Boss Battle"
+}
+
+#samples
+{
+    #default
+}
+
+#instruments
+{
+    @4             $CE $80 $B8 $06 $00 ; @30 ; Synth Brass
+	@8             $FF $E0 $B8 $0F $00 ; @31 ; Bass
+	@29            $9F $5B $00 $05 $00 ; @32 ; Snare 
+	@21            $FF $E0 $00 $05 $00 ; @33 ; Kick
+	n1F            $BF $FB $7F $04 $00 ; @34 ; Closed Hat
+	n1F            $AF $B4 $7F $04 $00 ; @35 ; Open Hat
+    @7             $FF $E0 $B8 $03 $00 ; @36 ; Organ
+	@6             $FD $E0 $B8 $03 $00 ; @37 ; Something
+	@1             $F6 $E0 $B8 $01 $80 ; @38 ; Strings
+	@4             $FF $E0 $B8 $01 $80 ; @39 ; Clavinet
+    @10            $FF $F7 $00 $05 $00 ; @40 ; Toms
+}
+
+$F4 $02
+
+(!100)[$F4 $09]
+(!101)[@37]
+(!102)[@36]
+(!103)[$FA $01 $BA]
+
+"GAIN ORG = (!101, -1) (!102, 1, 192)"
+"GAIN ON = (!100, -1)(!103, 3)"
+"GAIN OFF = (!100, 0)"
+
+"S = @32 e"
+"K = @33 e"
+"CH = @34 y8 f+"
+"OH = @35 y12 a+"
+
+$EF $FF $30 $D0
+$F1 $05 $50 $01
+$F5 $78 $F8 $00 $00 $00 $00 $00 $00
+
+#0 t67 o3 v100 y10 $F4 $03 w140
+[[OH8CH16f+16]]16
+OH8CH16f+16OH8CH16f+16OH2
+/[ [[OH16CH16f+16]]21 OH16 ]2
+[CH16 [[f+16]]13 OH8. CH16 [[f+16]]14 ]3
+[[f+16]]32
+r1
+r192
+#7 o4 v100 y15 $EE $1A
+[r2]9
+r4..
+/r4.
+(20)[@30 GAIN ON $DE $20 $10 $40 e8g8a8a+8.a8.
+g8r8e8g8a8>e8.d8.
+c8<a8.b8.a8b2
+a8.b8.>c8<b4..
+r8.e8g8a8a+8.a8.
+g8r8e8g8a8>e8.d8.
+c8<a4.b4.>c8
+g2^8f+2
+r4<g4a4g8
+f+2d2
+r4.g4a4g8
+b2f+2^6
+r6r24g4a4g8
+f+2e4.d8
+e1^1]1
+r2...
+r192
+#6 @38 o4 q78 y12
+e1
+>d1^1
+b1.
+r2
+/e1^1^1^1
+e1^1^1.
+d2
+g2..
+[f+1
+g1]2
+f+1
+e1^1^8
+r1
+r192
+#3 @38 o4 q78 y8
+b1^1
+>g1^1^2
+r2
+/g1^1^1^1
+g1^1^1.
+a2
+b2..a1
+[b1
+a1]2
+a1^1^8
+r1
+r192
+#4 o5
+q7A [GAIN ORG y15 <<b8$FA $01 $BF ^16b16$FA $01 $BF ^16b16$FA $01 $BF ^16b16b16$FA $01 $BF ^16b16$FA $01 $BF ^16b16$FA $01 $BF ^16b16$FA $01 $BF ^16]4
+b2$FA $01 $BF ^2
+/[[GAIN ON @39 q76 y20 >>(50)[e16r16]4 e16r8e16r16e16e16r8.
+(50)3 e16r8e16r16e16e16r16
+(50)4 e16r8e16r16e16e16r16
+(50)8]]4
+#5 @33 o4 y10
+v200 [GAIN ORG y5 g8$FA $01 $BF ^16g16$FA $01 $BF ^16g16$FA $01 $BF ^16g16g16$FA $01 $BF ^16g16$FA $01 $BF ^16g16$FA $01 $BF ^16g16$FA $01 $BF ^16]4
+g2
+$FA $01 $BF ^2
+/r8
+v160 y10 (20)
+r1
+r8
+r192
+#2 @31 o2 q7F y10 $FA $03 $FF $F4 $03 GAIN ON
+(70)[e8>e8d8d+8<g8.g+4^16
+e8>e8d8d+8g8.]1 g+8.g8
+(70) a8.a8
+b2<b2
+/(71)[>e16r16e16r16e16r16e16r16e6r48e6r48d8.
+r16d16r16d16r16d16r16d6r48d6r48c+8.
+r16c+16r16c+16r16c+16r16c+16r16c+16r16c+16r16c8.]1
+r16c16r16c16r16c16r16c8c+8d8d+8
+(71)
+r16c16r16c16r16c16r16d16r16d16r16d16r16d16r16
+e16r16e16r16e16r16e16r16e16r16e16r16e16r16d8.
+[r16d16r16d16r16d16r16d16r16d16r16d16r16e8.
+r16e16r16e16r16e16r16e16r16e16r16e16r16d8.]2
+r16d16r16d16r16d16r16d16r16d16r16d16r16c+8.
+r16c+16r16c+16r16c+16r16c+16r16c+16r16c+16r16c+16r16
+c+16r16c+16r16c+16r16c+16r16c+8d8d+8e8
+r1
+r192
+#1 o3 y10 $F4 $03 $FA $03 $80
+q7E (80)[K4e4e4e4
+e4e4e8e8]1 e4
+(80) e8e8
+e4e8.e16e16 q79 S16 q7A e16 q7B e16 q7C e16 q7C e16 q7D e16 q7E e16
+/[[q7E y10 e8K8e8e16e16S16 q7C e16 q7E K8 q7D @40 y5 g16 q7C g16 q7E y10 K8]]2
+(81)[q7C S8 q7E K8 q7C S8 q7E K8 q7D S8 q7E K8 q7E S8 q7E e8]1
+e8K8 q7D S8. q7E K16S8 q7C e8 q7E e8.e16
+[e8K8e8e16e16S16 q7C e16 q7E K8 q7D @40 y15 g16 q7C g16 y10 q7E K8]2
+(81)
+e8K8S8. q7D e16 q7E e8e8e16 q7C e16 q7E @40 y8 b16 q7D y12 a16
+ q7E y10 S8K8S8K16e16S16 q7C e16 q7E K8 @40 y5 g16g16 y10 K8
+S8K8S8K16e16S16 q7D e16 q7E K8 @40 y15 g16 q7C g16 q7E y10 K8
+(82)[S8K8S8K16e16S16 q7C e16 q7E K8 @40 y5 g16 q7C g16 q7E y10 K8]1
+ q7C S8 q7E K8S8.K16S8e8e8.e16
+(82)2
+e8 q79 S8 q7A e8 q7B e8 q7C e8 q7D e8 q7E e8 q7E e8
+ q7D e8 q7E K8S8. q7D e16 q7E e8e8e16 q7C e16 q7E @40 y5 b16 q7C y15 a16
+r1
+r192

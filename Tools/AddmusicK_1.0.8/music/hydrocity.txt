@@ -1,0 +1,230 @@
+#amk 2
+
+#spc
+{
+	#author "SEGA Sound Team/Arr. M. Nagao"
+	#game	"Sonic 3 & Knuckles"
+	#comment "it's Hydro City btw :)"
+	#title	"Hydrocity Zone (Act 2)"
+}
+
+#path "hydrawssity"
+
+#samples
+{
+    #optimized
+	"custom_fm_synth_brass.brr"
+	"custom_fm_pick_bass.brr"
+	"jv1080_you_and_luck.brr"
+	"r8_crash.brr"
+	"r8_hi-hat.brr"
+	"r8_hi-hat.brr"
+	"r8_tom_7.brr"
+	"r8_kick_2.brr"
+	"triton_power_snare.brr"
+	"monopoly_le_phunk_lead.brr"
+    "jv1080_you_and_luck_short_n_dwnsmp.brr"
+}
+
+#instruments
+{
+	"custom_fm_synth_brass.brr"                 $FF $E0 $B8 $05 $C0 ; @30
+	"custom_fm_pick_bass.brr"                   $FF $E0 $B8 $0B $80 ; @31
+	"jv1080_you_and_luck.brr"                   $FF $E0 $B8 $0B $80 ; @32
+	"r8_crash.brr"                              $FF $F0 $00 $08 $00 ; @33
+	"r8_hi-hat.brr"                             $FF $FB $00 $10 $00 ; @34
+	"r8_hi-hat.brr"                             $FF $F4 $00 $10 $00 ; @35
+	"r8_tom_7.brr"                              $FF $F0 $00 $10 $00 ; @36
+	"r8_kick_2.brr"                             $CF $20 $00 $10 $00 ; @37
+	"triton_power_snare.brr"                    $8F $20 $00 $10 $00 ; @38
+	"monopoly_le_phunk_lead.brr"                $FF $E0 $B8 $05 $C0 ; @39
+    "jv1080_you_and_luck_short_n_dwnsmp.brr"    $FF $E0 $B8 $05 $C0 ; @40
+}
+
+"S = @38 q7F e"
+"K = @37 q7C e"
+"CH = @34 y12 e"
+"OH = @35 y8 e"
+"CR = @33 y15 e"
+
+$F4 $02
+
+/
+
+$EF $FF $30 $D0
+$F1 $05 $50 $01
+
+(!100)[$F4 $09]
+(!101)[$FA $01 $B8]
+
+"GAIN = (!100, -1)(!101, 3)"
+
+#0 t53 @30 o5 q7B y8 GAIN w115
+[f32r16.f32r8r32f32r32f32r32f16.r32f16.r32f32r32f32r16.f32r16.
+d+32r16.d+32r8r32d+32r32d+32r32e32r16.e6r48e32r16.e32r16.]5
+f32r16.f32r8r32f32r32f32r32f16.r32f16.r32f32r32f32r16.f32r32e24r12
+>c16<a+16g16f32g32f16d+16c16r8.f4^16
+(10)[d+16.r32d24r48d+16.r32d16.r32d+24r8r48>c24r48c24r12d24r48d+16.r32
+<d16.r32f24r48d16.r32f16.r32d24r8r48a+24r48a+24r12]1 >c24r48d16.r32
+<d16.r32c24r48d16.r32c16.r32d24r8r48>d24r48d24r12d+24r48f16.r16.
+<a+24r8r48a+16.r32a+24r96a+16.r24a+6r48d+16.r32f16.r32
+(10) >d+24r48g16.r32
+<d+16.r32<a+24r48>d+16.r32<a+16.r32>c24r8r48a24r48a24r12>c24r48d+16.r16.
+d+24r12d+24r12d+24r48d+16.r32<b24r48b24r12b24r12b24r48d+16f16
+(11)[r16g16f16d+16r16d16d+16c16r16a+8.g16r16f16r8
+>d16<a+16g16d+8.d3r6r8
+g16f16d+16r16d16d+16c16r16]1 b8.g16r16f16r16
+g4a+8.g+16r16g+8.g4
+(11) <d+16g+16d+16>d+8g+6
+r48g16r16g16r16g16g8g16r3r16..
+#1 @30 o4 q7B y12 $DE $00 $10 $40 GAIN
+[a+32r16.a+32r8r32a+32r32a+32r32a+16.r32a+16.r32a+32r32a+32r16.a+32r16.
+a32r16.a32r8r32a32r32a32r32a+32r16.a+6r48a+32r16.a+32r16.]5
+a+32r16.a+32r8r32a+32r32a+32r32a+16.r32a+16.r32a+32r32a+32r16.a+32r2.
+r32
+b4^16
+(20)[>c16.r32<a+24r48>c16.r32<a+16.r32>c24r8r48g+24r48g+24r12a+24r48>c16.r32
+<<a+16.r32>d24r48<a+16.r32>d16.r32]1 <a+24r8r48>g24r48g24r12g+24r48a+16.r32
+<a+16.r32g+24r48a+16.r32g+16.r32a+24r8r48>a+24r48a+24r12>c24r48d16.r16.
+<g24r8r48d16.r32d24r48d+16.r32<a+6r48>c16.r32d16.r32
+(20) <g24r8r48>g24r48g24r12a+24r48>d+16.r32
+<<a+16.r32g24r48a+16.r32g16.r32a24r8r48>f24r48f24r12a24r48>c16.r16.
+c24r12c24r12c24r48c16.r32<g24r48g24r12g24r8r48c24r48d24r12
+(21)[d+24r48d24r48<a+24r12a+24r48>c24r48<g+24r12>f6r48d+24r12d24r8
+r48
+a+24r48g24r48d+24r48c6r48<f3r6r8
+>d+24r48d24r48]1 <a+24r12a+24r48>c24r48<g+24r12>g6r48d+24r12d24r12
+d+8..r32f6r48f24r12d+6r48d8..r16.
+(21) c24r12<a+24r48>c24r48<g+24r4r48>c16.r32d+16.r16.
+d24r12d24r12d24r48d16.r32d24r3r8
+r192
+#2 @39 o4 y12 $DE $10 $10 $40 GAIN
+(0)[r2]4
+r1...
+(30)[q7E g16a+16>c16 q7B $F4 $01 <b48a48g48f48e48d48c48<b48a48g48f48e48 q7E $F4 $01 a+16>c16<g16f+16f16d+16c16a+8a+16a6
+q7B $F4 $01 g48f48e48d48c48<b48a48 $F4 $01 g24r3r4 
+q7E >g16a+16>c16 q7B $F4 $01 <b48a48g48f48e48d48c48<b48a48g48f48e48 q7E $F4 $01 >f+16f16d+16f16d+16c16<a+16>g8g16]1 (38)[>c6
+q7B $F4 $01 <b48a48g48f48e48d48c48 $F4 $01 <b24r3r4]1
+q7E >(30) (33)[d+3
+r6r8f16g16a+16>d+16f16g16a+16]1
+(31)[$F4 $01 >d32d+16. $F4 $01 f16 $F4 $01 f32g16. $F4 $01 c8 $F4 $01 f+32g4.^32 $F4 $01 f16d+16
+$F4 $01 c32d4.^32]1 $F4 $01 <a+2^16
+(34)[$F4 $01 >c32d16. $F4 $01 d+16 $F4 $01 d+32f16. $F4 $01 <a+8 $F4 $01 >d+32f4.^32 $F4 $01 d+16d16
+c2^16d8.d+8f8]1
+(31) $F4 $01 (35)[d+4..d+16f16
+$F4 $01 f32g16. $F4 $01 d+16g8<a+8>c4..d+16f16
+$F4 $01 f32g4... $F4 $01 f8^48 $F4 $01 q7B e48d48c48<b48a48g48f48e48d48c48<b48 q7E $F4 $01 >c16d16]1
+(32)[d+6 q7B $F4 $01 d48c48<b48a48 q7E $F4 $01 >c8^48 q7B $F4 $01 d48d+48e48 q7E f12^48 $F4 $01 d8. c8<a+8
+g4 q7B $F4 $01 f48f+96 q7E g16. $F4 $01 f16 q7B $F4 $01 f48f+48 q7E g3^16 $F4 $01 >c16d16]1
+(36)[d+6 q7B $F4 $01 d48c48<b48a48 q7E $F4 $01 >c8^48 q7B $F4 $01 d48d+48e48 q7E f12^48 $F4 $01 d8.c8<b8
+>c4d8.d+8d+8.f8c16d16]1
+(32)
+(37)[d+8.d+8d16d+4f8d+8g+8.
+>c16r16c16r16c16c8<b16]1 r2....
+#7 @39 o4 y8 v160 $EE $20 $DE $10 $10 $40 GAIN
+(0)8
+r12
+(30)
+(38)
+(30) 
+(33) 
+(31) $F4 $01 a+2^16
+(34) 
+(31) 
+$F4 $01 (35) 
+(32) 
+(36) 
+(32) 
+(37) 
+r2.
+r96
+#6 o4 q7A y10 $DE $18 $10 $80 GAIN
+@32 (50)[c16<g16a+16g16r16g16a+16g16>c16<g16a+16g16r1]1
+r4
+(50)
+r1
+r2
+r16
+(51)[>f16f+16g16 @40 >a+16r16c24^96f+96g8r1
+r4]1
+@32 <c16a16g16r16f16g16e16r1..
+r16
+(51)
+@32 >c16<a+16g16f32f+32f16d+16c16r8.<a+3
+r4..r6 (52)[>c16c16r16d16d+8
+r2r8<a+16a+16r16]1 >c16d8
+r2r8d16d16r16d+16f8
+r16>d+16r8d8d16d+16r16d8.d+8 @40 f8
+r2r8<@32 (52)d+16g8
+r2r8<a16a16r16>c16d+8
+r16d+16<d+16>d+16<d+16>d+16d+16<d+16>d16d16r16d16
+r2. (53)[r16<a+16g16a+16a+16a+16g16a+16
+r2r16>d16<a+16>d16f16d16<a+16g16
+r2r16]1 b16g16b16f16g16b16>d16
+<c16d+16g16d+16d16f16a+16d16d+16g+16>c16<d+16f16g16>d16<g16
+r2 (53) d+16g+16d+16d+16>c16<g+16>d+16
+r16>d+16r16d+16r16d+16d+8d16r2....
+#5 @31 o3 q7A y10 $F4 $03 GAIN $DE $10 $10 $40
+[c16.r32d+96r24r96c6r48d+24r48f24r12d+8.f8..r32
+c16.r32<a96r24r96>c6r48<a24r48a+24r12g8.a+8..r32]5
+>c16.r32d+96r24r96c6r48d+24r48f24r12d+8.f6r48d+24r12
+>c16<a+16g16f32r96f+32r96f32r96d+16c16r8.<g4^16
+(60)[g+12r24g+16>g+32r16.<g+16r16g+16r16>g+32r32<g+8..r32g+16r16
+g12r24g16>g32r16.<g16r16g16r16>g32r32<g8..r32g16r16]1
+a+12r24a+16>a+32r16.<a+16r16a+16r16>a+32r32<a+8r16a+32r32a+16r8
+>c16r8c16r16>c32r32<c16r16>c8.<c8>c8
+(60)
+<f12r24f16>f32r16.<f16r16f16r16>f32r32<f8..r32f32r32g+32r16.
+g+16r16g+16r16g+32r32g+8g32r32g16r16g16r16>g32r32<g32r32g16
+(61)[f6r48f16r4r16g32r32>g8<g4
+g+6r48g+16r4r16a+32r32>a+8<a+8>a+8]1
+<f6r48f16r4r16g32r32>g8<g4
+>c6r48>c32r32<<a+6r48>a+32r16.<g+32r32>g+8<g8>g8
+(61)
+<g+6r48g+16r4r16f32r32f16.r32d+16.r32f16.r16.
+g32r16.g32r16.g32r32g16.r32g16r8.f32r32f+32r32g32r32a+16
+#4 o3 y10 $FA $03 $FF $F4 $03
+[K16 @36 q7A y12 >d16d16d16d16d16 y10 <a16a16a16a16a16 y8 f+16f+16f+16f+16f+16
+y10 K8S4^16K8e8.e8S8]2
+(70)[K4S16K8e4^16S8K8]1
+e4S16K8e8e8.e8S8
+(70)
+e4.S16K8e8.e8S8
+(70)
+e4S16K8e4^16e8S8
+K4S16K8e4^16S8K16S8
+K8e16 @36 q7A y8 >d16 y10 <a16 y12 f+16 y10 S4e8 @36 q7A y8 >g32 y9 d32 y11 <a16 y12 f+16
+y10 (70)2
+e4S16K8e8.e8e8S8.
+e8.e8e16e8e8.e16e16e16e16
+(70)2
+e4S16K8e4^16S8K16e8
+S8K16S16K16S16e16K16e8S8e16e16e16
+(71)[K8.e16S4^16K16e8S4]2
+K8.e16S4^16K16S8e4
+K8S8K16S16K16S16K8S8e32e32e32e32e16e16
+(71)
+K8.e16S4^16e16K8S4
+e8K16S16e8K16S16K16S16e16K16S4
+K16S8e8e16e8e4e32e32e16e16e16
+#3 o4 y10 $FA $03 $FF q7A $F4 $03
+CR1^4
+<CH24e24e24OH8.e1.^8.
+CH24e24e24OH8.e4..
+>CR4<CH16OH16 [CH16]10
+[[
+(81)[CH16e16OH16CH16e16OH16 CH16e16e16e16e16e16e16e16OH16CH16
+CH16e16OH16CH16e16OH16CH16e16e16e16e16e16e16e16e16]1 e16
+]]2
+(81)
+>CR1^16
+[CR4. [[<OH8CH8]]10 OH1^8]2
+(80)[
+[[CH16e16OH16CH16]]2 [[e16]]6 OH16
+[[CH16]]13 [[e16e16OH16CH16]]3
+[[e16]]6
+]1 OH16CH16
+[e16]12
+r4
+(80) >CR1^8
+r2r192

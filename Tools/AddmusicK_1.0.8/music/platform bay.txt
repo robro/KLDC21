@@ -1,0 +1,504 @@
+#amk 2
+
+#spc
+{
+#title "Romantic Tour ~ Dan-no-Ura"
+#game "Touhou Tenryuuguu ~ HGoC"
+#author "samidare"
+#comment "just call me SD-90 Chorus EP"
+}
+
+#samples
+{
+#default
+}
+
+#instruments
+{
+@5 $EC $F2 $00 $07 $00	;@30
+@8 $FF $E0 $00 $1E $00	;@31
+@21 $FF $E0 $00 $04 $00	;@32
+n1B $CF $3F $00 $00 $00	;@33
+"default/13 SMW Thunder.brr" $00 $00 $DF $11 $00	;@34
+@23 $AF $F3 $00 $05 $00	;@35
+@23 $FF $E0 $00 $04 $00	;@36
+@1 $E7 $E3 $00 $06 $00	;@37
+@1 $FF $E8 $00 $06 $00	;@38
+n1D $EE $F7 $00 $00 $00	;@39
+@10 $EF $E6 $00 $05 $00	;@40
+@1 $EE $D2 $DF $03 $00	;@41
+@0 $AC $E5 $00 $06 $00	;@42
+@2 $BC $D2 $00 $03 $00	;@43
+@3 $ED $F0 $00 $06 $00	;@44
+@6 $BB $E5 $00 $03 $00	;@45
+@6 $B7 $E5 $00 $03 $00	;@46
+@4 $DC $E8 $00 $03 $00	;@46
+}
+
+(!900)[v160 $E8 $30 $A9]
+(!901)[$E8 $48 $D9]
+
+"M=@32 q7f"
+"T=@33 q73"
+"X=@34 q78"
+"K=@35"
+"J=@36"
+"Cym=@39 q74"
+"S=@40 q7e"
+
+"String=@37 v110 o3 $DE $0C $06 $18"
+"Flute=@42 v160 o3 $EC $00 $06 $FE"
+
+$EF $8F $32 $C0
+$F1 $05 $C0 $00
+
+#0 w170 $F4 $02 t61   v130
+(0)[ @30 y11 o4 l16 dcdg rdcd adc<a+> a+agc	;2
+dcdg rdcd adc<a+>> dc<af]4
+/
+(0)4
+
+v110 (0)8
+
+(60)[@37 o3 $DE $0C $06 $18 y12 l1
+d+fg1^1]4
+
+
+
+;==========================
+
+y11 v130 @30 $DF
+$FA $02 $FD (0)4	;4+8
+
+v110 (0)8
+
+@41 v200 y10 o4
+h3 f4r4 h0
+
+$FA $02 $FE v110 (60)4
+
+$FA $02 $03 (60)4
+
+$FA $02 $00 v130 (0)4
+
+;[[r2]]255
+
+#1
+v130 (100)[@30  y9
+o3 l16 a+ga+>d r<a+ga+> f<a+gf> gfd<a
+a+ga+>d r<a+ga+> f<a+gf> agfc]4
+
+/
+(100)4
+
+v110 (100)8 y10
+
+
+(160)[@37 o3 $DE $0C $06 $18 l1
+<a+>cd1^1]3
+
+(161)[<a+>cd
+
+@41 v170 o5 l16
+[[g>cdfdc]]2 v200 $F4 $03 Cymc4 $F4 $03]
+
+;==========================
+
+y9 v130 @30 $DF
+$FA $02 $FD (100)4
+
+(!901,1,2)
+(!900,-1) 	
+
+$FA $02 $00 @46 v160 q7f p12,12,40 y10 o4 l16
+;i omitted some of the original's rests to have a fuller sound
+b2.^8 @45 ag	;58
+f+4.d2^8	;59
+e4.<b1^2^8>	;61
+e2. ^8e8	;62
+f32f+4^16.d+4.<b4>	;63
+f+2..gf+	;64
+g1 b4^8bab2..ab>d2	;67
+e2....d+32	;68
+e8.d8.<b8 a8.e8.a8	;69
+b1^4. d+2^8	;71
+d+8.e8re1^2^8	;73
+
+(!901,0)
+(!900,0) 	
+
+$F4 $03 v200 Cymc4 q7f v130 JccKcc  $F4 $03 $FA $02 $FE v110 (160)4
+
+$FA $02 $03 (160)3
+
+(161)
+
+$FA $02 $00 v130 (100)4
+
+;[[r2]]255
+
+#2 v200 o2 l16 @31
+(200)[grfg rgrf grgr gfr8	;2
+grfg rfgr gggr a+afr]2	;3
+(206)[d+rd+d+ rd+rd+ d+rd+r d+dr8	;6
+d+rdd+ rdd+r d+d+d+d+ d+gd+r	;7
+frcf rd+fr frfr fd+r8	;8
+frcf rd+fr fffr fa>cr]	;9
+
+/
+
+(200)2
+(206)
+
+(200)2
+
+(201)[<d+rd+d+ rd+rd+ d+rd+r d+gd+r	;22
+frd+f rd+fr fffr f>c<fr	;23
+grfg rgrf grgr gfr8	;24
+grfg rfg](210)[r gggr g>dgd<]	;25
+
+
+(200)2
+(201)(211)[f grg>c< a+>d<gf]	;33
+
+(202)[d+ra+d+ ra+d+g d+a+d+r d+ga+r	;34
+fr>c<f r>c<fa+ f>c<fr f]f>c<f	;35
+(203)[gr>d<g r>d<ga+ g>d<gr ga+>dr<	;36
+gr>d<g] (240)[r>d<a+g g>d<gr g>d<gf]	;37
+
+(202)a+>c<f	;39
+(203) (207)[a+>d<gr ga+gf ffa+f]	;41
+
+(202)a+>c<f
+(203) (208)[r>d<g>g< g>d<gr ga+gf]	;45
+
+(202)a+>c<f	;47
+
+(209)[gr>d<g r>d<gb g>d<gr gg>dr]	;48
+<g8fg >cd<g>c d8<g8> cd<gf	;49
+
+;==========================
+
+$FA $02 $FD (200)2 (206)
+
+(200)2 (201) (210)
+(200)2 (201) (211)
+
+$FA $02 $FE o2 r2
+(202)f>c<f
+(203)(240)
+
+(202)a+>c<f
+(203)(207)
+
+(202)a+>c<f
+(203)(208)
+
+(202)a+>c<f
+(209) $FA $02 $00
+f8>c<f f>cff<	;89
+fa+>cf gafd+	;89.5
+
+[[ $FA $02 $03 (202) h-3 o2 g+>d+<a+ h0
+gr>d<g r>d<ga+ g>d<gr gg>dr<	;36
+gr>d<g (208) ]]4
+
+$FA $02 $00 (200)2 (206)
+
+;[[r2]]255
+
+#3 
+[r2]16
+/
+(399)[String y8 g1^1 @38v130<g1^1d+1^1f1
+
+@41 v200 o4 l16 y6 dcdg rdcd adc<a+>> dc<af]	;17
+
+(300)[d8.a+8a+aa+>c8<a+a8fc8	;18
+d8.g2^8 y10 dcf	;19
+y6 d8.a+8a+aa+>c8<a+a8fda	;20
+a+8af8dcd2^16	;21
+rgfg rgfg rgrg ara+r	;22
+araf+8d4^16>c8<a+8a8	;23
+aa+ag1^4^16]	;24.5
+(398)[y10 >dgaa+>d<a+ag]	;25
+
+;touhou music be like "yes let's repeat this entire section but add two little flourishes" which forces me to split this loop into three :')
+y6 Flute (300)
+(390)[g>c8d8f8.	;33
+
+g2^16r g8d8g8	;34
+a8.a+8.a8f8.c8.a8	;35
+a8. a+8]r (391)[g1^8
+g8f24g24f24 d8c8	;37
+d4.c8<g2.. f8g8>c8<g8f8	;39
+g4.a+8 g4.f8]	;40
+g2(392)[g8f8g8>c8		;41
+d4.c8d2..c8d8f8 d24f24d24c8	;43
+d4.c8d4.f8	;44
+g2.d8f8		;45
+g4.f8 g2.. f8g8>c8d8f8]	;47 
+g1^1	;49
+
+;==========================
+
+$FA $02 $FD $EC $00 $00 $00 (399)
+(300)(398)
+
+$FA $02 $09 y6 v160 (300) r2
+
+(!901,1,2)
+(!900,-1) 	
+$FA $02 $0a @45 v160 p12,12,40 (390)o4r32g-32 (391)o3g4...g-32 (392)o5g2..f24g24f24g2
+
+(!901,0)
+(!900,0)
+
+$FA $02 $0f @47 y12 v150 p8,6,25 (390)o4r32g-32 (391)o3g4...g-32 (392)o5g1^1
+
+
+$FA $02 $00 String y8 g1^1 @38v130<g1^1d+1^1f1^1
+
+;[[r2]]255
+
+#4
+v150 o4 l16
+[Jc4. KcJc KcJc8. Kcc8.]8	;2
+
+$f4 $03
+/
+(499)[String y12 
+d1^1 @38v130<d1^1<a+1^1>c1
+
+@41 v200 o3 y14 l16 a+ga+>d r<a+ga+> f<a+gf> agfc]	;17
+
+(400)[<a+8.>g8 gfg a8gf8c<a8	;18
+a+8.>d2^8r8.
+<a+8.>g8 gfg a8gf8d<a+>f 	;20
+g8fd8<a+aa+2^16	;21
+>rdcd rdcd rdrd frgr	;22
+f+rf+d8<a4^16>a8g8f8	;23
+fgfd1^4^16]r2
+
+Flute (400)
+(490)[fa8a+8>c8.	;33
+
+d2^16r d8<a+8>d8	;34
+f8.g8.f8 c8.<a8.>f8	;35
+f8.g8]r (491)[d1^8 d8c24d24c24< a+8a8	;37
+a+4.a8d2.. c8d8g8d8c8	;39
+d4.g8d4.c8]	;40
+d2(492)[d8c8d8g8	;41
+a+4.a8a+2..a8a+8>c8<a+24>c24<a+24a8	;43
+a+4.a8a+4.>c8	;44
+d2.<a+8>c8	;45
+d4.c8d2.. c8d8f8g8>c8]d1^1	;49
+
+;==========================
+
+$FA $02 $FD $EC $00 $00 $00 (499)
+v160 (400)r2
+
+$FA $02 $09 (400) r2
+
+(!901,1,2)
+(!900,-1) 	
+$FA $02 $0A @45 v150 p12,12,40
+(490)o4r32d-32 (491)o3d4...d-32 (492)o5d2..c24d24c24d2	;89
+
+(!901,0)
+(!900,0) 	
+
+@47 v150 y8 p8,6,25 $FA $02 $0f
+(490)o4r32d-32 (491)o3d4...d-32 (492)o5d1^1	;89
+
+$FA $02 $00 String y12 
+d1^1 @38v130<d1^1<a+1^1>c1^1
+
+;[[r2]]255
+
+#5 v200 l16 o4
+[Mc8.Tc8. Mc8c8Tc8 Mcc8.]7	;8
+Mc8.Tc8. Mc8c8 Xc8ccc8	;9
+/
+Cymc8(500)[Xc4 Mc8c8Xcc Mcc8.	;10
+c8Xcc8.Mc8 c8Xc8 McXcc8	;11
+Mc8Xc4Mc8 c8XccMcc8.	;12
+Mc8]Xcc8.Mc4Xc8McXcc8	;13
+
+Mc8(500)Scc4c4^16 q78c q7ac q7cc q7ec
+
+(501)[Cymc8Xc8 Mc8Sc8 Mc8Xcc Mcc8.	;18
+Mc8Sc8 Mc8Sc8 Mc8Xc8 McXcc8		;19
+Mc8Sc8 Mc8Sc8 Mc8Xcc MccSc8		;20
+Mc8Xcc Mc8Sc8 Mc8Sc8 McXcc8		;21
+Mc8Sc8 Mc8Sc8 Mc8ScXc MccSc8	;22
+Mc8Xcc Mc8Sc8 Mc8Sc8 MccSc8]		;23
+(530)[Mc8Xc8 Mc8Sc8 Mc8Xcc MccSc8]		;24
+(504)[Mc8Xcc8 Sc8c c8Xc8 ScXcc8]		;25
+
+
+(501)(530)
+
+Mc8Xcc8 Mcc-cc-Sc8. Mc<bag>	;33
+
+(505)[Tc8Sc8 Mc8Sc8 Mc8Xcc Mc8Sc8]	;34
+(571)[ [[Mc8Sc8]]3  MccSc8	;35
+[[Mc8Sc8]]2 Mc8Xcc McScMc8	;36
+c8Xcc Mc8S<g8> Mc8Sc8 MccScMc	;37
+
+Cymc4.Sc8 Mc8Sc8 MccSc8	;38
+
+Mc8Xcc [[Mc8Sc8]]2 MccSc8	;39
+
+[[Mc8Sc8]]3 MccSc8	;40
+[[Mc8Sc8]]3 MccScMc]	;41
+
+
+(505)	;42
+(572)[Mc8Xcc [[Mc8Sc8]]3	;43
+Mc8ScMc8.Sc8 Mc8Xcc Mc8Sc8	;44
+Mc8Xcc8.Sc8 MccSc8 MccXcMc	;45
+
+Tc8Xcc Mc8Sc8 Mc8Xcc MccSc8	;46
+Mc8Xcc Mc8Sc8 Mc8Sc8 MccScMc]	;47
+
+[[Mc8Sc8]]2 c8c8ccc8	;48
+Mc8Xcc Mc8Sc8 c8c8cccc	;49
+
+(592)[Mc4. c8c8c8 cc8.	;50
+[[c8.c8.c8 c8c8ccc8
+c8.c8.c8 c8c8cc8.]]3]	;56
+c8Sc4ccc8Xc8SccXcSc	;57
+
+;==========================
+;17 to 31
+
+(501)(530)(504)
+
+(501)Mc8Sc8 Mc8Sc8 Mc8Xc8 Sccc8	;72
+cccc8 ccc c8c8 cccc	;73
+
+Mc4.cc
+
+(505)	;
+(571)	;
+
+(505)	;
+(572)
+
+(567)[Mc8Xc8 Mc8Sc8 c8c8 ccc8]
+
+[[c]]16
+
+
+(505)	;
+(571)	;
+
+(505)	;
+(572)
+
+(567)
+
+Cymc4Scc Cymc8Scc Cymc8 Scccc
+
+(592)
+Mc8.c8.c8 Sc4cccc
+
+;[[r2]]255
+
+#6
+
+[r2]16
+/
+v150 o4 l16
+(600)[Kc8Jc8 Kc8Jc8 KccJc8 KccJc8]7
+Kc8Jc8 Kc8Jc8 KccJc8 KccJcc	;17
+(600)15	;25-8 - 32-7
+
+Cym c4^16 c4^16 c4. q7f
+
+
+$F4 $03
+(605)[
+String y8 l1
+< gaa+2  @43 $DF y10 o4 f2q7ad2q7f
+
+String y8 < g	;38
+
+@43 $DF y10 o4
+f2 q7af2 q7c d2 q7f f2	;40
+
+String y8 < r1. g	;42
+
+@43 $DF y10 o4
+f2 q7a f2 	;43
+d2 q7f f2d2 r2	;45
+
+String y8 <
+gab1^1]
+
+(687)[$F4 $03 $DF y10 v130 o4 l16
+Cymc8q7f Jc8 Kc8Jc8 KccJc8 KccJc8	;50
+[[Kc8Jc8 Kc8Jc8 KccJc8 KccJc8]]7	] ;57
+
+
+y9 v110 @30 $F4 $03
+$FA $02 $FD (100)8
+
+$FA $02 $FE r2 (605)
+
+$FA $02 $03 (605)
+
+$FA $02 $00 (687)
+
+;[[r2]]255
+
+#7
+
+[r2]16
+/
+(766)[String y10
+<a+1^1
+@38v170<a+1^1g1^1a1^1]
+
+[r2]32
+
+(700)[@44 o3 v100 l16 y12	;this alternates between a harpsichord and chorus EP in the original, but i thought @3 would add a nice sparkliness to the song
+g8d>c8c<g8> f64f+64g4...	;34
+r8. crc<gr> c<afa fa>c<f>	;35
+r4^16 fd<a+g8>c8 <a+>c<g8	;36
+>c8c<a+ l32 ff+a+gfgfg g8a+8g8f8	;37
+
+> v50 $E8 $30 $64 [[cd]]6 $E8 $30 $32 [[cd]]6
+v100 < c16f16g8	;38
+> d8d16 c8c16<g8 r2	;39
+
+v50 $E8 $30 $64 [[cd]]4 $E8 $30 $32 [[cd]]4 v100
+
+g8>d8< g16g16>d8	;40
+
+c8c16<a+16
+
+v50 $E8 $30 $64 [[fa+]]6 $E8 $30 $32 [[fa+]]6 v100	;41
+
+l16 r8.> c8c<g8 g>d<g8 g>cd8	;42
+d8.c8c8. dfd8 ddc8	;43
+d8d l32 v50 $E8 $30 $64 [[cd]]6 $E8 $48 $32 [[cd]]7 v100	;44
+
+l16 c8c<a+8a+f8 gga+8 ga+gf8 r8	;45ish
+>c8c<a+8g8>d+4.	;46
+<a+8.a8.f8 aa+a8 agf8	;47
+
+[[>c8.<b8.b4> c8<b4]]2 ]
+
+[[r2]]49
+
+$FA $02 $FE (700)
+
+$FA $02 $03 (700)
+
+$FA $02 $00 (766)
+
+;[[r2]]255
+
