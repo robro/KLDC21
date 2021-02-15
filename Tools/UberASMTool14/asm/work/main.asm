@@ -1,6 +1,6 @@
 incsrc "asm/work/library.asm"
 incsrc "../../other/macro_library.asm"
-!level_nmi	= 0
+!level_nmi	= 1
 !overworld_nmi	= 0
 !gamemode_nmi	= 0
 !global_nmi	= 0
@@ -8,11 +8,9 @@ incsrc "../../other/macro_library.asm"
 !sprite_RAM	= $7FAC80
 
 autoclean $A5D2F3
-autoclean $9084CC
-autoclean $9084D9
-autoclean $9084E4
-autoclean $9084B4
-autoclean $A4FBEE
+autoclean $9086A9
+autoclean $908691
+autoclean $A5DC4C
 
 !previous_mode = !sprite_RAM+(!sprite_slots*3)
 

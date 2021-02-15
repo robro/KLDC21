@@ -5,6 +5,7 @@ verbose: on
 
 ; Level list. Valid values: 000-1FF.
 level:
+106 cosmic_clone_sample.asm
 
 ; OW list. Valid values: 0 = Main map; 1 = Yoshi's Island; 2 = Vanilla Dome;
 ; 3 = Forest of Illusion; 4 = Valley of Bowser; 5 = Special World; and
@@ -20,4 +21,4 @@ global:		other/global_code.asm	; global code.
 statusbar:	other/status_code.asm	; status bar code.
 macrolib:	other/macro_library.asm	; macro library.
 sprite:		$7FAC80			; 38 (SNES) or 68 (SA-1) bytes of free RAM.
-rom:		../../ggj2021.smc	; ROM file to use.
+rom:		../../kldc21.smc	; ROM file to use.

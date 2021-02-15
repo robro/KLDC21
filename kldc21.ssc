@@ -1,0 +1,2 @@
+00 0020 Cosmic Clone\nFollows Mario and tries to catch him.\n\nExtra byte 1: Determines how many frames will the Cosmic Clone be behind the real Mario.\n\nExtra byte 2: Each bit has a different function. See the asm file for more information.\n\nExtra byte 3: Palette. See the asm file for more information.
+00 0022 0,0,0 0,-16,0
